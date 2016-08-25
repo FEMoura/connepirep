@@ -30,7 +30,7 @@ if ($form && $form ['submit']) {
 				'resumo' => $_POST ['resumo'],
 				'ano' => $_POST ['ano'],
 				'autores' => $_POST ['autores'],
-				'evento' => $_POST ['evento'],
+				'ies' => $_POST ['ies'],
 				//'arquivo' => $upload->getName(),
 				'arquivo' => $upload->getResult(),
 				'aprovado' => 'S',
@@ -104,8 +104,8 @@ if ($form && $form ['submit']) {
 		    </label>
 
 		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Evento:</b>
-		      <input type="text" name="evento" placeholder="Evento" class="ls-field" required>
+		      <b class="ls-label-text">Instituição:</b>
+		      <input type="text" name="ies" placeholder="Instituição" class="ls-field" required>
 		    </label>
 
 		    <label class="ls-label col-lg-12 col-xs-12">

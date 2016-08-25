@@ -22,7 +22,7 @@ if ($form && $form ['submit']) {
 				'resumo' => $_POST ['resumo'],
 				'ano' => $_POST ['ano'],
 				'autores' => $_POST ['autores'],
-				'evento' => $_POST ['evento'],
+				'ies' => $_POST ['ies'],
 				'arquivo' => $upload->getResult(),
 				'aprovado' => 'N',
 				'area' => $_POST ['area']
@@ -144,8 +144,8 @@ if ($form && $form ['submit']) {
 						</div>
 						
 						<div class="form-group col-lg-12 col-md-12">
-					    	<label class="" for="">Evento <span class="requisito">*</span>:</label>
-							<input type="text" class="form-control inp br" name="evento" placeholder="Evento" required>
+					    	<label class="" for="">Instituição <span class="requisito">*</span>:</label>
+							<input type="text" class="form-control inp br" name="ies" placeholder="Instituição" required>
 						</div>
 						
 						<div class="form-group col-lg-6 col-md-6">
