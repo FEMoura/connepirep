@@ -1,4 +1,4 @@
-# RI-Br [Sistema Web de Repositório Institucional]
+﻿# RI-Br [Sistema Web de Repositório Institucional]
 
 Este é um Projeto de Repositório Institucional com foco no gerenciamento de Pesquisa, Extensão e Publicações.
 
@@ -23,3 +23,5 @@ Este é um Projeto de Repositório Institucional com foco no gerenciamento de Pe
 ---------------------------
 <a href="https://github.com/brenolessa">Breno Andrade @brenolessa</a><br>
 <a href="https://github.com/moarabrito">Moara Brito @moarabritto</a><br>
+
+teste
