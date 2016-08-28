@@ -12,9 +12,9 @@
 		$userLogin = $_SESSION['userlogin'];
 	}
 	
-	$filtroano = $_POST['filtroano'];
-	$readPublicacaoporano = new Read();
-	$readPublicacaoporano->FullRead("SELECT COUNT(*) FROM publicacao WHERE aprovado = 'S' AND ano = {$filtroano}");
+	$filtroies = $_POST['filtroies'];
+	$readPublicacaopories = new Read();
+	$readPublicacaopories->FullRead("SELECT COUNT(*) FROM publicacao WHERE aprovado = 'S' AND ies = '{$filtroies}'");
 ?>
 <!DOCTYPE html>
 <html class="ls-theme-green ls-html-nobg">
@@ -33,18 +33,18 @@
 	 <div class="ls-box">
       <div class="ls-box ls-board-box">
 	   <header class="ls-info-header">
-	   <h2 class="ls-title-3">Selecione o ano:</h2>
+	   <h2 class="ls-title-3">Selecione o IF:</h2>
 	   </header>
 	   <div class="row text-center">
 	     <div class="container-fluid">
 		  <div id="sending-stats" class="row ls-clearfix">
 		   <span class="ls-board-data">
-		   <form action="dashboardano.php" method="post" enctype="multipart/form-data">
-	      <select class="form-control inp" name="filtroano">
-		   <option value="ano" selected>Ano</option>
-		   <option value="2006">2006</option>
-		   <option value="2007">2007</option>
-		   <option value="2008">2008</option>
+		   <form action="dashboardif.php" method="post" enctype="multipart/form-data">
+	      <select class="form-control inp" name="filtroies">
+		   <option value="ano" selected>IF</option>
+		   <option value="IFAL">IFAL</option>
+		   <option value="IFPB">IFPB</option>
+		   <option value="IFPI">IFPI</option>
 		  </select>
 		  <input type="submit" class="btn btn-default inp bt-lg" name="submit" value="Filtrar">
 		  </span>
@@ -55,7 +55,7 @@
 		
 		
       <div class="container-fluid">
-        <h1 class="ls-title-intro ls-ico-dashboard">Dashboard <?php echo $filtroano ?></h1>
+        <h1 class="ls-title-intro ls-ico-dashboard">Dashboard <?php echo $filtroies ?></h1>
 
 <!-- ----------------- -->
 <div class="ls-box ls-board-box">
@@ -72,7 +72,7 @@
         </div>
         <div class="ls-box-body">
           <span class="ls-board-data">
-            <strong class="ls-color-theme"><?php echo $readPublicacaoporano->getResult()[0]['COUNT(*)']; ?></strong>
+            <strong class="ls-color-theme"><?php echo $readPublicacaopories->getResult()[0]['COUNT(*)']; ?></strong>
           </span>
         </div>
       </div>
@@ -111,10 +111,10 @@
     <div class="col-sm-12 col-md-12">
       <div class="ls-box">
         <div class="ls-box-head">
-          <h6 class="ls-title-4">Quantidade de publicações por IF</h6>
+          <h6 class="ls-title-4">Quantidade de publicações por ano</h6>
         </div>
         <div class="ls-box-body">
-          <div class="ct-chart ct-perfect-fourth ct-golden-section" id="chart7"></div>
+          <div class="ct-chart ct-perfect-fourth ct-golden-section" id="chart5"></div>
         </div>
       </div>
     </div>
@@ -127,7 +127,7 @@
 // Quantidade de publicações por área
 
 $qpa = new Read();
-$qpa->FullRead("SELECT count(*), area FROM publicacao WHERE aprovado='S' AND ano = {$filtroano} GROUP BY area");
+$qpa->FullRead("SELECT count(*), area FROM publicacao WHERE aprovado='S' AND ies = '{$filtroies}' GROUP BY area");
 
 $qtd_qpa = array();
 $area_qpa = array();
@@ -142,23 +142,24 @@ $qtd_qpa = implode(', ', $qtd_qpa);
 //transforma em string
 $area_qpa = '"'.implode('", "', $area_qpa).'"';
 
+// Quantidade de publicações por ano
 
-// Quantidade de publicação por IF
+$qpano = new Read();
+$qpano->FullRead("SELECT count(*), ano FROM publicacao WHERE aprovado='S' AND ies = '{$filtroies}' GROUP BY ano");
 
-$qpi = new Read();
-$qpi->FullRead("SELECT count(*), ies FROM publicacao WHERE aprovado='S' AND ano = {$filtroano} GROUP BY ies");
+$countAno = array();
+$ano = array();
 
-$qtd_qpi = array();
-$ies_qpi = array();
-
-foreach ($qpi->getResult() as $q){
-	$qtd_qpi[] = $q['count(*)'];
-	$ies_qpi[] = $q['ies'];
+foreach ($qpano->getResult() as $a){
+	$countAno[] = $a['count(*)'];
+	$ano[] = $a['ano'];
 }
 //tranforma em string
-$qtd_qpi = implode(', ', $qtd_qpi);
+$countAno = implode(', ', $countAno);
+
 //transforma em string
-$ies_qpi = '"'.implode('", "', $ies_qpi).'"';
+$ano = '"'.implode('", "', $ano).'"';
+
 ?>
 
 <script>
@@ -168,11 +169,15 @@ $ies_qpi = '"'.implode('", "', $ies_qpi).'"';
     series: [[<?php echo $qtd_qpa; ?>]]
   });
   
-  // Gráfico de barra com a quantidade de artigos por IF
-  new Chartist.Bar('#chart7', {
-    labels: [<?php echo $ies_qpi; ?>],
-    series: [[<?php echo $qtd_qpi; ?>]]
-  });
+  // Gráfico de linha com a quantidade de artigos por ano.
+   new Chartist.Line('#chart5', {
+	   labels: [<?php echo $ano; ?>],
+	   series: [[<?php echo $countAno; ?>]]
+	 }, {
+	   low: 0,
+	   showArea: true
+	 });
+
 </script>
 
 
