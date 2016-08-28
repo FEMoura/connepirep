@@ -18,7 +18,14 @@
       
       <nav class="ls-menu">
         <ul>
-           <li><a href="painel.php" class="ls-ico-dashboard" title="Dashboard">Dashboard</a></li>
+           <li>
+		   <a href="painel.php" class="ls-ico-dashboard" title="Dashboard">Dashboards</a>
+				<ul>
+					<li><a href="painel.php">Estatísticas Gerais</a></li>
+					<li><a href="dashboardano.php">Estatísticas por Ano</a></li>
+					<li><a href="dashboardif.php">Estatísticas por IF</a></li>
+				</ul>
+		   </li>
            <li><a href="listaPesquisa.php" class="ls-ico-ftp" title="Projeto de Pesquisa">Projeto de Pesquisa</a></li>
            <li><a href="listaExtensao.php" class="ls-ico-lamp" title="Projeto de Extensão">Projeto de Extensão</a></li>
            <li><a href="listaPublicacao.php" class="ls-ico-docs" title="Publicação">Publicação</a></li>
