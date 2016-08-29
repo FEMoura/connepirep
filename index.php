@@ -108,7 +108,7 @@ if($form && $form['submit']){
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="index.php">
-		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/ifal.png">
+		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/ifal.jpg">
 		      </a>
 		    </div>
 		
@@ -117,7 +117,7 @@ if($form && $form['submit']){
 		      <ul class="nav navbar-nav navbar-right">
 		      	<li class="li-login"><a href="submeter.php" class="submeter" title="Submeter Publicação"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Submeter</a></li>
 		        <li class="li-login"><a href="admin.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
-		        <!-- <li class="dropdown">
+		        <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
 		          <ul class="dropdown-menu">
 		            <li><a href="#">Action</a></li>
@@ -130,10 +130,34 @@ if($form && $form['submit']){
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
-		</nav>
-
+				</nav>
+		<nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><a href="#" role="button" aria-haspopup="true" aria-expanded="false">Sobre o CONNEPI</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navegar por <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+         <li><a href="#">Estatísticas</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">LOGIN</a></li>        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+        </li>
+      </ul>
+    <!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 		<div class="container abc">
-		
 		<?php 
 		$get = filter_input(INPUT_GET, 'exe', FILTER_DEFAULT);
 		if (!empty($get)){
@@ -148,10 +172,10 @@ if($form && $form['submit']){
 		
 			<div class="row text-center">
 				<h1>CONGRESSO NORTE NORDESTE DE PESQUISA E INOVAÇÃO</h1>
-				<h2>Repositório do CONNEPI</h2>
+				<h2>Repositório Digital</h2>
 		
 				<div class="col-md-12 col-lg-12 c">
-					<form action="index.php" method="post" enctype="multipart/form-data" style="background-color:;">
+					<form action="index.php" method="post" enctype="multipart/form-data" style="background-color">
 		
 						<div class="form-group col-lg-5 col-md-5">
 					    	<label class="sr-only" for="">Digite um termo para busca</label>
