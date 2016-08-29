@@ -1,16 +1,5 @@
 <?php 	
-	session_start();
 	require 'app/Config.inc.php';
-	$login = new Login();
-	
-	if (!$login->CheckLogin()){
-		unset($_SESSION['userlogin']);
-		header('Location: index.php?exe=restrito');
-	
-	}
-	else{
-		$userLogin = $_SESSION['userlogin'];
-	}
 	
 	$filtroies = $_POST['filtroies'];
 	$readPublicacaopories = new Read();

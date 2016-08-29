@@ -146,7 +146,7 @@ if($form && $form['submit']){
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
-         <li><a href="#">Estatísticas</a></li>
+         <li><a href="painel.php">Estatísticas</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#">LOGIN</a></li>        

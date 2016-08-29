@@ -1,27 +1,9 @@
 ﻿<?php 	
-	session_start();
 	require 'app/Config.inc.php';
-	$login = new Login();
-	
-	if (!$login->CheckLogin()){
-		unset($_SESSION['userlogin']);
-		header('Location: index.php?exe=restrito');
-	
-	}
-	else{
-		$userLogin = $_SESSION['userlogin'];
-	}
-	
-	$readPesquisa = new Read();
-	$readPesquisa->FullRead('SELECT COUNT(*) FROM pesquisa');
 
-	
 	$readPublicacao = new Read();
 	$readPublicacao->FullRead('SELECT COUNT(*) FROM publicacao WHERE aprovado = :aprovado', "aprovado=S");
 	
-	$readExtensao = new Read();
-	$readExtensao->FullRead('SELECT COUNT(*) FROM extensao');
-		
 ?>
 <!DOCTYPE html>
 <html class="ls-theme-green ls-html-nobg">
