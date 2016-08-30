@@ -2,7 +2,7 @@
 	require 'app/Config.inc.php';
 
 	$readPublicacao = new Read();
-	$readPublicacao->FullRead('SELECT COUNT(*) FROM publicacao WHERE aprovado = :aprovado', "aprovado=S");
+	$readPublicacao->FullRead("SELECT COUNT(*) FROM publicacao WHERE aprovado = 'S'");
 	
 ?>
 <!DOCTYPE html>

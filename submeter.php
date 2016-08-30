@@ -19,13 +19,13 @@ if ($form && $form ['submit']) {
 
 		$dados = [
 				'titulo' => $_POST ['titulo'],
-				'resumo' => $_POST ['resumo'],
 				'ano' => $_POST ['ano'],
 				'autores' => $_POST ['autores'],
 				'ies' => $_POST ['ies'],
 				'arquivo' => $upload->getResult(),
 				'aprovado' => 'N',
-				'area' => $_POST ['area']
+				'area' => $_POST ['area'],
+				'keywords' => $_POST ['keywords']
 		];
 
 		if($upload->getResult()){
@@ -133,14 +133,14 @@ if ($form && $form ['submit']) {
 							<input type="text" class="form-control inp br" name="titulo" placeholder="Título da Publicação" required>
 						</div>
 		
-						<div class="form-group col-lg-12 col-md-12">
-					    	<label class="" for="">Resumo <span class="requisito">*</span>:</label>
-					    	<textarea name="resumo" placeholder="Resumo" rows="10" class="form-control ta br" required></textarea>
-						</div>
-		
-						<div class="form-group col-lg-12 col-md-12">
+						<div class="form-group col-lg-6 col-md-6">
 					    	<label class="" for="">Autor(es) <span class="requisito">*</span>:</label>
 							<input type="text" class="form-control inp br" name="autores" placeholder="Autor(es)" required>
+						</div>
+						
+						<div class="form-group col-lg-6 col-md-6">
+					    	<label class="" for="">Palavras-chave <span class="requisito">*</span>:</label>
+							<input type="text" class="form-control inp br" name="keywords" placeholder="Palavras-chave" required>
 						</div>
 						
 						<div class="form-group col-lg-12 col-md-12">

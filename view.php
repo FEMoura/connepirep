@@ -91,21 +91,12 @@ if (isset($_GET['id'])){
 								<div class="col-lg-10 col-md-10"><p>'.$b['autores'].'</p></div>
 							</div>
 						</div>';
-						
+											
 						echo '
 						<div class="row">
 							<div class="col-lg-12 col-md-12">
-								<div class="col-lg-2 col-md-2"><p class="title">Resumo:</p></div>
-								<div class="col-lg-10 col-md-10"><p>'.$b['resumo'].'</p></div>
-							</div>
-						</div>';
-						
-						
-						echo '
-						<div class="row">
-							<div class="col-lg-12 col-md-12">
-								<div class="col-lg-2 col-md-2"><p class="title">Evento:</p></div>
-								<div class="col-lg-10 col-md-10"><p>'.$b['evento'].'</p></div>
+								<div class="col-lg-2 col-md-2"><p class="title">Instituição:</p></div>
+								<div class="col-lg-10 col-md-10"><p>'.$b['ies'].'</p></div>
 							</div>
 						</div>';
 												
