@@ -12,6 +12,9 @@
 
     <?php require_once('assets.php');?>
     <script type="text/javascript" src="assets/js/chartist.min.js"></script>
+	<script src="assets/js/high.js"></script>
+	<script src="assets/js/highex.js"></script>
+	<script src="assets/js/graphs.js"></script>
     <link href="assets/css/chartist.min.css" rel="stylesheet" type="text/css">
     
   </head>
@@ -58,6 +61,8 @@
     <p class="ls-float-right ls-float-none-xs ls-small-info"><strong></strong></p>
     <h2 class="ls-title-3">Gráficos</h2>
   </header>
+  
+  <div id="area" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
   
 <div class="ls-box ls-board-box">
   <div id="sending-stats" class="row ls-clearfix">
