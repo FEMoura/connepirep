@@ -61,8 +61,13 @@
     <p class="ls-float-right ls-float-none-xs ls-small-info"><strong></strong></p>
     <h2 class="ls-title-3">Gráficos</h2>
   </header>
-  
   <div id="area" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+ 
+ </div>
+ 
+ <div class="ls-box ls-board-box">
+  <div id="ano" style="min-width:620px; height: 400px; margin: 0 auto"></div>
+ </div>
   
 <div class="ls-box ls-board-box">
   <div id="sending-stats" class="row ls-clearfix">
@@ -108,7 +113,6 @@
       </div>
     </div>
  </div>
-</div>
 </div>
 <!-- ---------------- -->
 

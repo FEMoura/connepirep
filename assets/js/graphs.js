@@ -61,3 +61,34 @@ $(function () {
         }]
     });
 });
+
+$(function () {
+    $('#ano').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Quantidade de publicações por ano'
+        },
+        xAxis: {
+            categories: ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013']
+        },
+        yAxis: {
+            title: {
+                text: 'Quantidade'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: 'Total de publicações',
+            data: [276,311,440,1069,1029,1637,2195,2540]
+        }]
+    });
+});
