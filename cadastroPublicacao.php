@@ -27,7 +27,6 @@ if ($form && $form ['submit']) {
 		
 		$dados = [ 
 				'titulo' => $_POST ['titulo'],
-				'resumo' => $_POST ['resumo'],
 				'ano' => $_POST ['ano'],
 				'autores' => $_POST ['autores'],
 				'ies' => $_POST ['ies'],
@@ -89,11 +88,6 @@ if ($form && $form ['submit']) {
 		    </label>
 
 		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Resumo:</b>
-		      <textarea name="resumo" placeholder="Resumo" rows="10" class="ls-field" required></textarea>
-		    </label>
-
-		    <label class="ls-label col-lg-12 col-xs-12">
 		      <b class="ls-label-text">Ano:</b>
 		      <input type="number" name="ano" placeholder="Ex: 2015" class="ls-field" required>
 		    </label>
@@ -110,7 +104,17 @@ if ($form && $form ['submit']) {
 
 		    <label class="ls-label col-lg-12 col-xs-12">
 		      <b class="ls-label-text">Área</b>
-		      <input type="text" name="area" placeholder="Área" class="ls-field" required>
+		      <select class="form-control inp" name="area" required>
+				<option value="Ciências Agrárias" selected>Ciências Agrárias</option>
+				<option value="Ciências Biológicas">Ciências Biológicas</option>
+				<option value="Ciências da Saúde">Ciências da Saúde</option>
+				<option value="Ciências Exatas e da Terra">Ciências Exatas e da Terra</option>	
+				<option value="Ciências Humanas">Ciências Humanas</option>
+				<option value="Ciências Sociais e Aplicadas">Ciências Sociais e Aplicadas</option>
+				<option value="Engenharias">Engenharias</option>
+				<option value="Linguística, Letras e Artes">Linguística, Letras e Artes</option>
+				<option value="Multidisciplinar">Multidisciplinar</option>
+			  </select>
 		    </label>
 
 		    <label class="ls-label col-lg-12 col-xs-12">

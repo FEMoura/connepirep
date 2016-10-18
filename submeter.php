@@ -23,7 +23,7 @@ if ($form && $form ['submit']) {
 				'autores' => $_POST ['autores'],
 				'ies' => $_POST ['ies'],
 				'arquivo' => $upload->getResult(),
-				'aprovado' => 'N',
+				'aprovado' => 'S',
 				'area' => $_POST ['area'],
 				'keywords' => $_POST ['keywords']
 		];
@@ -155,7 +155,17 @@ if ($form && $form ['submit']) {
 						
 						<div class="form-group col-lg-6 col-md-6">
 					    	<label class="" for="">Área <span class="requisito">*</span>:</label>
-							<input type="text" class="form-control inp br" name="area" placeholder="Área" required>
+								<select class="form-control inp" name="area" required>
+									<option value="Ciências Agrárias" selected>Ciências Agrárias</option>
+									<option value="Ciências Biológicas">Ciências Biológicas</option>
+									<option value="Ciências da Saúde">Ciências da Saúde</option>
+									<option value="Ciências Exatas e da Terra">Ciências Exatas e da Terra</option>	
+									<option value="Ciências Humanas">Ciências Humanas</option>
+									<option value="Ciências Sociais e Aplicadas">Ciências Sociais e Aplicadas</option>
+									<option value="Engenharias">Engenharias</option>
+									<option value="Linguística, Letras e Artes">Linguística, Letras e Artes</option>
+									<option value="Multidisciplinar">Multidisciplinar</option>
+								</select>
 						</div>
 						
 						<div class="form-group col-lg-12 col-md-12">
