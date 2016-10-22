@@ -5,11 +5,9 @@ require 'app/Config.inc.php';
 if (isset($_GET['id'])){
 	
 	$id = $_GET['id'];
-	$categoria = $_GET['categoria'];
-
 	$read = new Read();
 			
-	$read->FullRead("SELECT * FROM {$categoria} WHERE id= :id", "id={$id}");
+	$read->FullRead("SELECT * FROM publicacao WHERE id = $id");
 			
 }
 
@@ -73,7 +71,7 @@ if (isset($_GET['id'])){
 
 
 			<?php
-				if ($read->getResult() && $categoria == 'publicacao'){	
+				if ($read->getResult()){
 					foreach ($read->getResult() as $b){
 
 						echo '

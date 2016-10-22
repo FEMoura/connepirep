@@ -21,43 +21,29 @@ if($form && $form['submit']){
 		else if ($_POST['busca']){
 			
 			$busca = $_POST['busca'];
-			$categoria = $_POST['categoria'];
 			$tipo = $_POST['tipo'];
-
 			$read = new Read();
-			
-			if ($categoria == 'publicacao'){
-				$read->FullRead("SELECT * FROM {$categoria} WHERE {$tipo} LIKE \"%{$busca}%\" AND aprovado = 'S'");
+		    $read->FullRead("SELECT * FROM publicacao WHERE {$tipo} LIKE \"%{$busca}%\" AND aprovado = 'S'");
 			}
-			else {
-				$read->FullRead("SELECT * FROM {$categoria} WHERE {$tipo} LIKE \"%{$busca}%\"");
-			}
-			
-			if(!$read->getResult()){
-				$resultado = false;
-			}
-										
+			if (!$read->getResult()){
+					$resultado = false;
+			}							
 		}
 	}
-
-
-}
-
-
 ?>
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Repositório CONNEPI</title>
-
+	
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/repositorio.css" rel="stylesheet">
 
     <script src="assets/js/jquery-2.1.4.min.js"></script>
     <script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <link href="assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	
+	<title>Repositório CONNEPI</title>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -130,8 +116,7 @@ if($form && $form['submit']){
 		<li><a href="submeter.php">Submeter</a></li>
         <li class="li-login"><a href="admin.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
       </ul>
-    <!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+  </div>
 </nav>
 		<div class="container abc">
 		<?php 
@@ -152,21 +137,13 @@ if($form && $form['submit']){
 		
 				<div class="col-md-12 col-lg-12 c">
 					<form action="index.php" method="post" enctype="multipart/form-data" style="background-color">
-		
 						<div class="form-group col-lg-5 col-md-5">
 					    	<label class="sr-only" for="">Digite um termo para busca</label>
 							<input type="search" class="form-control inp" name="busca" id="" placeholder="Digite um termo para pesquisar..." required>
 						</div>
 		
-						<div class="form-group col-lg-3 col-md-3">
-					    	<select class="form-control inp" name="categoria">
-								<option value="publicacao" selected>Publicação</option>
-								<option value="pesquisa">Projeto de Pesquisa</option>
-								<option value="extensao">Projeto de Extensão</option>
-							</select>
-						</div>
 		
-						<div class="form-group col-lg-2 col-md-2">
+						<div class="form-group col-lg-4 col-md-4">
 							<select class="form-control inp" name="tipo">
 								<option value="area">Área</option>
 								<option value="titulo" selected>Título</option>
@@ -175,8 +152,8 @@ if($form && $form['submit']){
 								<option value="keywords">Palavras-Chave</option>
 							</select>
 						</div>
-		
-						<div class="form-group col-lg-2 col-md-2">
+						
+						<div class="form-group col-lg-3 col-md-3">
 							<input type="submit" class="btn btn-default inp bt-lg" name="submit" value="Pesquisar">
 						</div>
 		
@@ -210,11 +187,11 @@ if($form && $form['submit']){
 									foreach ($read->getResult() as $r){
 										echo '<tr>';
 											echo '<td>'.$r['ano'].'</td>';
-											echo '<td><a href="view.php?id='.$r['id'].'&categoria='.$categoria.'">'.$r['titulo'].'</a></td>';
+											echo '<td>'.$r['titulo'].'</a></td>';
 											echo '<td>'.$r['area'].'</td>';
 											echo '<td>'.$r['autores'].'</td>';
 											echo '<td>'.$r['keywords'].'</td>';
-											echo '<td style="text-align:center;"><a href="view.php?id='.$r['id'].'&categoria='.$categoria.'" class="btn bt-visualizar" title="Visualizar"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>';
+											echo '<td style="text-align:center;"><a href="view.php?id='.$r['id'].'" class="btn bt-visualizar" title="Visualizar"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>';
 										echo '</tr>';
 									
 									}

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 30-Ago-2016 às 07:56
+-- Generation Time: 22-Out-2016 às 05:42
 -- Versão do servidor: 10.1.13-MariaDB
 -- PHP Version: 7.0.6
 
@@ -112,7 +112,27 @@ INSERT INTO `publicacao` (`id`, `titulo`, `ano`, `autores`, `keywords`, `ies`, `
 (29, 'CONTROLE E MODELAGEM FUZZY APLICADOS AOS NÍVEIS DE ÁGUA DISPONÍVEL NO SOLO COM A FINALIDADE DE OTIMIZAR PROCESSOS DE IRRIGAÇÃO', 2006, 'Francisco Marconi Cavalcanti de Lima;\r\nSimplício Arnaudi da Silva;\r\nJames Sidney Freitas de Carvalho;', 'controle e modelagem fuzzy, fuzzy logic toolbox, água disponível, potencial matricial, irrigação automatizada, dotação hídrica.', 'IFPB', 'files/2006eng14.pdf', 'S', 'Engenharias'),
 (30, 'ESTUDO PARA A IMPLEMENTAÇÃO DE PLANEJAMENTO E CONTROLE GERENCIAL EM PEQUENAS EMPRESAS CONSTRUTORAS DE EDIFICAÇÕES VERTICAIS NA CIDADE DE JOÃO PESSOA - PB.', 2006, 'M. A. Padilha Júnior;\r\nA. P. T. Medeiros;\r\nN. M. C. Araújo;', 'Construção civil, pequenas empresas, planejamento, controle gerencial.', 'IFPB', 'files/2006eng15.pdf', 'S', 'Engenharias'),
 (31, 'IDENTIFICAÇÃO, AQUISIÇÃO E AVALIAÇÃO DOS PRINCIPAIS MATERIAIS E COMPONENTES UTILIZADOS PELAS EMPRESAS CONSTRUTORAS DE JOÃO PESSOA-PB', 2006, 'L. S. Viegas;\r\nN. M. C. Araújo;\r\nA. R. Meira;\r\nG. R. Meira;', 'Construção civil, avaliação de fornecedores, materiais e componentes.', 'IFPB', 'files/2006eng16.pdf', 'S', 'Engenharias'),
-(32, 'PROJETO E EXECUÇÃO DE CASA ECOEFICIENTE EM CAMPINA GRANDE - PB', 2006, 'J. N. Ribeiro Filho;\r\nG. C. Silva;\r\nK. F. M. Lucena;\r\nN. H. C. Carvalho;', 'Eficiência energética, gestão de águas, tecnologias alternativas, construção.', 'IFPB', 'files/2006eng17.pdf', 'S', 'Engenharias');
+(32, 'PROJETO E EXECUÇÃO DE CASA ECOEFICIENTE EM CAMPINA GRANDE - PB', 2006, 'J. N. Ribeiro Filho;\r\nG. C. Silva;\r\nK. F. M. Lucena;\r\nN. H. C. Carvalho;', 'Eficiência energética, gestão de águas, tecnologias alternativas, construção.', 'IFPB', 'files/2006eng17.pdf', 'S', 'Engenharias'),
+(33, 'ASTRONOMIA FUNDAMENTAL: CAPACITANDO PROFESSORES E DISSEMINANDO A ASTRONOMIA, ENQUANTO CIÊNCIA, À COMUNIDADE ESCOLAR', 2006, 'A. A. Sobrinho;\r\nD. A. S. Menezes;\r\nL. V. S. Souza;', 'Astronomia, ensino, interdisciplinaridade.', 'IFRN', 'files/2006hum1.pdf', 'S', 'Ciências Humanas'),
+(34, 'DETERMINAÇÃO POTENCIOMÉTRICA DE SULFITO E DERIVADOS EM VINHO\r\n', 2006, 'R. S. G. Andrade; M. R. Andrade; E. A. Neves;', 'Sulfito, vinho, ácido ascórbico, potenciometria.\r\n', 'IFS', 'files/2006exatas2.pdf', 'S', 'Ciências Exatas'),
+(35, 'ANÁLISE DE DEFICIÊNCIAS DAS MEDIDAS MITIGADORAS DE UM RELATÓRIO DE CONTROLE AMBIENTAL', 2009, 'Robson Garcia da SILVA ; Valdenildo Pedro da SILVA; Erika Araújo da Cunha PEGADO', 'Medidas mitigadoras, Impactos  ambientais, Relatório de Controle Ambiental (RCA), Licenciamento ambiental onshore', 'IFRN', 'files/1476118359.pdf', 'S', 'Ciências Agrárias'),
+(36, 'OUTORGA PARA DIREITO DE USO DA ÁGUA, IMPORTANTE  INSTRUMENTO DE CONTROLE AMBIENTAL', 2009, 'Thiago Jhonatha Fernandes SILVA ;  Waldelucy Karina Bomfim Felix da SILVA', 'Outorga, controle ambiental e recursos hídricos', 'IFAL', 'files/1476118421.pdf', 'S', 'Ciências Agrárias'),
+(37, 'PROPOSTA DE MONITORAMENTO AMBIENTAL NO SETOR INDUSTRIAL', 2009, 'Waldelucy Karina Bomfim Felix da SILVA;  Thiago Jhonatha Fernandes SILVA ', 'monitoramento ambiental, moderação, normas ambientais', 'IFAL', 'files/1476118520.pdf', 'S', 'Ciências Agrárias'),
+(38, 'Avaliação do tratamento anaeróbio de substratos oriúndos da mistura de esterco bovino e manipueira.', 2009, 'Renato Menezes Barbosa de MIRANDA; Mayra Machado de Medeiros FERRO;  Giordano Bruno Medeiros GONZAGA; Katharin Stephanie Caldas Gajardo VARGAS; Vicente Rodolfo Santos CEZAR', 'metano, biodigestor, processamento de mandioca, energia', 'IFAL', 'files/1476118633.pdf', 'S', 'Ciências Agrárias'),
+(39, 'OCUPAÇÃO DA APP DO RIO ITAPECURÚ E SEUS PRINCIPAIS IMPACTOS NO PERÍMETRO URBANO DE CODÓ-MA', 2009, 'Nayara  Silva SOUZA; Lizandro Pereira de ABREU; Jacqueline Santos BRITO; Renato Sérgio Soares COSTA', 'uso e ocupação, APP, impactos, rio Itapecurú, Codó', 'IFPI', 'files/1476118743.pdf', 'S', 'Ciências Agrárias'),
+(40, 'ANÁLISE DA PERCEPÇÃO AMBIENTAL DA POPULAÇÃO OCUPANTE  DA APP DO RIO ITAPECURÚ NO PERÍMETRO URBANO DE CODÓ-MA', 2009, 'Nayara Silva SOUZA; Lizandro Pereira de ABREU; Jacqueline Santos BRITO; Renato Sérgio Soares COSTA', 'percepção ambiental, APP, rio Itapecurú, Codó', 'IFPI', 'files/1476118913.pdf', 'S', 'Ciências Agrárias'),
+(41, 'APROVEITAMENTO ALTERNATIVO DA CASCA DA BATATA INGLE SA PARA ELABORAÇÃO DE BOLO FRITO ', 2009, 'Lisandra Maria da Silva CARVALHO; Lívia Oliveira da SILVA; Lucas Pinheiro  DIAS; Maria Geci de Oliveira CRONEMBERGER', 'resíduo, casca da batata, aproveitamento, bolo frito', 'IFPI', 'files/1476119003.pdf', 'S', 'Ciências Agrárias'),
+(42, 'DESMATAMENTO, QUEIMADAS E EROSÃO NA PRÁTICA AGRÍCOLA:  EDUCAÇÃO AMBIENTAL NO BAIRRO BARREIRO, MIRINZAL MARANHÃO', 2009, 'Silmo RIBEIRO; Ronilson BRITO; Mariano ROJAS; Francisco SOUSA; Marcelo OLIVEIRA', 'Desmatamento, queimadas e erosão', 'IFMA', 'files/1476119098.pdf', 'S', 'Ciências Agrárias'),
+(43, 'EFEITO DA FREQUÊNCIA DA ADUBAÇÃO DE COBERTURA NA PRODUÇÃO DE FRUTOS DO PIMENTÃO (Capsicum annuum L) VIA ÁGUA DE IRRIGAÇÃO', 2009, 'José Ferreira dos SANTOS JÚNIOR; Edimilson Laurindo da SILVA; Adelmo Lima  BASTOS; Nelson A. do NASCIMENTO JÚNIOR', 'fertirrigação, freqüência, pimentão, nitrogênio, potássio', 'IFAL', 'files/1476119269.pdf', 'S', 'Ciências Agrárias'),
+(44, 'PRODUÇÃO ARTESANAL DE AGUARDENTE DE BANANA COM FRUTOS EM ESTÁDO AVANÇADO DE MATURAÇÃO', 2009, 'Ademar da Silva PAULINO; Manoel Santos da SILVA; Maria Gilvania XAVIER;  José Harlisson de Araújo FERRO; Diogo de Barros Mota MÉLO', 'banana, aguardente de banana, fermentação', 'IFAL', 'files/1476119418.pdf', 'S', 'Ciências Agrárias'),
+(45, 'AVALIAÇÃO SENSORIAL DE SOBREMESA LÁCTEA SABOR MARACUJÁ A BASE DE RICOTA', 2009, 'Victor ANDRADE; Mario COSTA; Allyson JERÔNIMO; Jadson SANTOS; Maria ALVES', 'Massa protéica, fruta tropical, atributo sensorial', 'IFAL', 'files/1476119576.pdf', 'S', 'Ciências Agrárias'),
+(46, 'A IMPORTÂNCIA DA ESPÉCIE CECROPIAPACHYSTACHYA NA RECOMPOSIÇÃO FLORESTAL DA MATA ATLÂNTICA', 2009, 'Sherliton da Silva ALVES;', 'degradação ambiental, Mata Atlântica, recuperação, dispersão, Umbaúba', 'IFAL', 'files/1476119651.pdf', 'S', 'Ciências Agrárias'),
+(47, 'QUANTIFICAÇÃO DE ESTÔMATOS E TEOR DE CLOROFILA EM FOLHAS DE SOL E DE SOMBRA EM ACEROLA', 2009, 'José Marcílio da SILVA; Fabiana Augusta Santiago BELTRÃO; Antonio da Lapa Rocha PASSOS; Cleofan Cardoso GUIMARÃES', 'Malpighia emarginata D.C., anatomia foliar, estômatos, clorofilas', 'IFPE', 'files/1476119785.pdf', 'S', 'Ciências Agrárias'),
+(48, 'UTILIZAÇÃO DE UM SIG NA CARACTERIZAÇÃO E CLASSIFICAÇÃO DE ESPODOSSOLOS EM PERNAMBUCO', 2009, 'Bruna Patrícia Barbosa de ALENCAR; Vânia Soares de CARVALHO; Ioná Maria Beltrão Rameh BARBOSA', 'classificação de solos, espodossolos, sistema de informação geográfica', 'IFPE', 'files/1476119884.pdf', 'S', 'Ciências Agrárias'),
+(49, 'ESTUDO DA EXTRAÇÃO DE ÓLEO VEGETAL DA SEMENTE DE MAMONA', 2009, 'Ana Patrícia da Silva MAFRA; Keyll Carlos Ribeiro MARTINS; Lídia Santos Pereira MARTINS; Dalmo Inácio Galdez COSTA; Lorenni Evren SILVA', 'prensagem, sementes de mamona, óleo vegetal', 'IFMA', 'files/1476120010.pdf', 'S', 'Ciências Agrárias'),
+(50, 'ANÁLISE SENSORIAL DE COCADA SABORIZADA COM POLPA DE MARACUJÁ DO MATO', 2009, 'Ana Júlia de Brito ARAÚJO; Luciana Cavalcanti de AZEVEDO; Sonia Maria Amorim LOURA; Fábia Fernandes Pinheiro da COSTA; Francisco Pinheiro de ARAÚJO', 'Passiflora cincinnata Mast., semi-árido, processamento.', 'IFPE', 'files/1476120105.pdf', 'S', 'Ciências Agrárias'),
+(51, 'AVALIAÇÃO DE VINHO OBTIDO DE UVA BENITAKA RECÉM COLHIDA E DE UVAS COM 60 DIAS DE CÂMARA FRIA A -2°C', 2009, 'Felipe do Nascimento Almeida; Larissa Santos Walfredo; Maria Aline de Lima Silva; Nicolas Matheus F. de Oliveira; Alexandre Ferreira dos Santos', 'Vitis vinífera L., vinho, pós-colheita', 'IFPE', 'files/1476710703.pdf', 'S', 'Ciências Agrárias'),
+(52, 'MONITORAMENTO DE UMIDADE DO SOLO EM VIDEIRA DE MESA E VINHO NO VALE DO SÃO FRANCISCO UTILIZANDO TENSIÔMETRIA', 2009, 'Jucicléia SOARES DA SILVA; Daniela FERREIRA BARBOSA; Emylly FIGUEREDO LEAL; Rosangela OLIVEIRA SANTOS; Luís FERNANDO DE SOUZA MAGNO CAMPECHE', 'Potencial matricial, tensiômetros, uva', 'IFPE', 'files/1476710805.pdf', 'S', 'Ciências Agrárias');
 
 -- --------------------------------------------------------
 
@@ -180,7 +200,7 @@ ALTER TABLE `pesquisa`
 -- AUTO_INCREMENT for table `publicacao`
 --
 ALTER TABLE `publicacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
