@@ -56,7 +56,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
 		<li><a href="submeter.php">Submeter</a></li>
-        <li class="li-login"><a href="admin.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
+        <li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
       </ul>
   </div>
 </nav>

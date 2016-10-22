@@ -1,15 +1,6 @@
 ﻿<?php 
-
-require 'app/Config.inc.php';
-
-if (isset($_GET['id'])){
-	
-	$id = $_GET['id'];
-	$read = new Read();
-			
-	$read->FullRead("SELECT * FROM publicacao WHERE id = $id");
-			
-}
+	session_start();
+	require 'app/Config.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -33,8 +24,9 @@ if (isset($_GET['id'])){
   </head>
   <body>
 
-<nav class="navbar navbar-default">
+	  <nav class="navbar navbar-default">
 		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 		        <span class="sr-only">Toggle navigation</span>
@@ -63,87 +55,80 @@ if (isset($_GET['id'])){
       </ul>
       <ul class="nav navbar-nav navbar-right">
 		<li><a href="submeter.php">Submeter</a></li>
-        <li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
+        <li class="li-login"><a href="admin.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
       </ul>
   </div>
 </nav>
 
-	<div class="container">
-	<h1 class="detalhes">Detalhes:</h1>
-	<div class="row">
-		<div class="col-lg-12 col-md-12 view">
+	<?php
+		$valida = false;
+		
+		$login = new Login();
+		if ($login->CheckLogin()){
+			header('Location: admin.php');
+		}
+		
+		//filtros em forma de array
+		
+		$dataLogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+		if(!empty($dataLogin['AdminLogin'])){
+			
+			$login->ExeLogin($dataLogin);
+			if (!$login->getResult()){
+				//mensagens
+				//echo $login->getError()[0];
+				$valida = true;
+			}
+			else{
+				header('Location: admin.php');
+			}
+			
+		}
+		
+		
+	?>
 
 
-			<?php
-				if ($read->getResult()){
-					foreach ($read->getResult() as $b){
 
-						echo '
-						<div class="row">
-							<div class="col-lg-12 col-md-12">
-								<div class="col-lg-2 col-md-2"><p class="title">Título:</p></div>
-								<div class="col-lg-10 col-md-10"><p>'.$b['titulo'].'</p></div>
-							</div>
-						</div>';
+
+	<div class="container abcd">
+
+		<div class="row text-center">
+			<!-- <h1>RI<span class="ft">IFAL</span></h1> -->
 						
-						echo '
-						<div class="row">
-							<div class="col-lg-12 col-md-12">
-								<div class="col-lg-2 col-md-2"><p class="title">Autor(es):</p></div>
-								<div class="col-lg-10 col-md-10"><p>'.$b['autores'].'</p></div>
-							</div>
-						</div>';
-											
-						echo '
-						<div class="row">
-							<div class="col-lg-12 col-md-12">
-								<div class="col-lg-2 col-md-2"><p class="title">Instituição:</p></div>
-								<div class="col-lg-10 col-md-10"><p>'.$b['ies'].'</p></div>
-							</div>
-						</div>';
-												
-						echo '
-						<div class="row">
-							<div class="col-lg-12 col-md-12">
-								<div class="col-lg-2 col-md-2"><p class="title">Ano:</p></div>
-								<div class="col-lg-10 col-md-10"><p>'.$b['ano'].'</p></div>
-							</div>
-						</div>';
-						
-						echo '
-						<div class="row">
-							<div class="col-lg-12 col-md-12">
-								<div class="col-lg-2 col-md-2"><p class="title">Área:</p></div>
-								<div class="col-lg-10 col-md-10"><p>'.$b['area'].'</p></div>
-							</div>
-						</div>';
-						
-					}
+
+			<div class="col-md-4 col-lg-4 col-xs-12 contor col-lg-offset-4 col-md-offset-4">
+			<!-- <h2 class="hh">ÁREA DO ADMINISTRADOR</h2> -->
+				<form action="" method="post" name="AdminLoginForm">
+
+					<div class="form-group col-lg-12 col-md-12">
+				    	<label class="sr-only" for="">Usuário</label>
+						<input type="text" class="form-control i" name="user" placeholder="Usuário" required>
+					</div>
+
+					<div class="form-group col-lg-12 col-md-12">
+				    	<label class="sr-only" for="">Senha</label>
+						<input type="password" class="form-control i" name="pass" placeholder="Senha" required>
+					</div>
+
+					<div class="form-group col-lg-12 col-md-12">
+						<input type="submit" class="btn btn-default i bt-entrar" name="AdminLogin" value="Entrar">
+					</div>
+
+				</form>
+				
+				<?php 
+				if ($valida){
+					MSG($login->getError()[0], $login->getError()[1]);
 				}
-			?>
-	
+				?>
+				
 
-	<hr>
-	
-	<iframe src="uploads/<?php echo $b['arquivo']; ?>" width="100%" height="1000" style="border: none;" download="<?php echo 'RIIFBA-'.$b['ano'].'-'.$b['id'];?>"></iframe>
-	
-	<br>
-	<hr>
-	<div class="col-lg-12 col-md-12 download">
-		<a href="uploads/<?php echo $b['arquivo']; ?>" class="btn btn-success btn-lg" target="__blank" download="<?php echo 'CONNEPI-'.$b['ano'].'-'.$b['id'];?>"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Download</a>
-	</div>
-
-
-
-
+			</div>
 		</div>
+
 	</div>
 	
-	
-	
-
-</div>
-
 	<div class="container-fluid">
 			<div class="row">
 				<div class="cop">
@@ -152,9 +137,8 @@ if (isset($_GET['id'])){
 			</div>
 		</div>
 
-	
 
-	<script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
   </body>
 </html>

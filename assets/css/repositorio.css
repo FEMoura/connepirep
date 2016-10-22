@@ -172,7 +172,10 @@ h2{
 	min-height: 600px;
 }
 .abcd{
-	min-height: 600px;
+		width:1000px; /* Tamanho da Largura da Div */
+		height:600px; /* Tamanho da Altura da Div */
+        margin-top:150px; /* ou seja ele pega 50% da altura tela e sobe metade do valor da altura no caso 100 */
+        left:50%;
 }
 .pre-cop{
 	background-color:#44494B;
@@ -263,6 +266,7 @@ h2{
 .alert-info{
 	background-color: #2980b9;
 	color: #FFFFFF;
+	border-radius: 20px;
 }
 .alert-warning{
 	background-color: #f1c40f;
@@ -294,6 +298,7 @@ h2{
 	margin-bottom: 40px;
 	font-family: 'rr';
 	text-transform: uppercase;
+	border-radius: 20px;
 }
 .br{
 	border-radius: 0px!important;
