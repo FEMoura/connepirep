@@ -44,6 +44,7 @@ if($form && $form['submit']){
     <link href="assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 	
 	<title>Repositório CONNEPI</title>
+	<link rel="shortcut icon" type="image/x-icon" href="if.png" />
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -135,7 +136,7 @@ if($form && $form['submit']){
 				<h1>CONGRESSO NORTE NORDESTE DE PESQUISA E INOVAÇÃO</h1>
 				<h2>Repositório Digital</h2>
 		
-				<div class="col-md-12 col-lg-12 c">
+				<div class="col-md-12 col-lg-12">
 					<form action="index.php" method="post" enctype="multipart/form-data" style="background-color">
 						<div class="form-group col-lg-5 col-md-5">
 					    	<label class="sr-only" for="">Digite um termo para busca</label>
