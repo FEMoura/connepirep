@@ -49,7 +49,7 @@ if (isset($_GET['id'])){
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="index.php">
-		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/ifal.png">
+		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/ifal.jpg">
 		      </a>
 		    </div>
 
