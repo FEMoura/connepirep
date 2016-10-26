@@ -74,29 +74,30 @@ if ($form && $form ['submit']) {
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="index.php">
-		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/ifal.png">
+		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/ifal.jpg">
 		      </a>
 		    </div>
-		
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      <ul class="nav navbar-nav navbar-right">
-		      	<li class="li-login"><a href="submeter.php" class="submeter" title="Submeter Publicação"><span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Submeter</a></li>
-		        <li class="li-login"><a href="admin.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
-		        <!-- <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ADMIN <span class="caret"></span></a>
-		          <ul class="dropdown-menu">
-		            <li><a href="#">Action</a></li>
-		            <li><a href="#">Another action</a></li>
-		            <li><a href="#">Something else here</a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="#">Separated link</a></li>
-		          </ul>
-		        </li> -->
-		      </ul>
-		    </div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav>
+	  </nav>
+		<nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><a href="#" role="button" aria-haspopup="true" aria-expanded="false">Sobre o CONNEPI</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navegar por <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">EDIÇÕES</a></li>
+            <li><a href="#">ÁREAS</a></li>
+            <li><a href="#">INSTITUIÇÕES</a></li>
+          </ul>
+        </li>
+		 <li><a href="#">Downloads</a></li>
+         <li><a href="painel.php">Estatísticas</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="submeter.php">Submeter</a></li>
+        <li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
+      </ul>
+  </div>
+</nav>
 
 		<div class="container abc">
 		
@@ -186,7 +187,6 @@ if ($form && $form ['submit']) {
 
 		<div class="container-fluid">
 			<div class="row">
-				<div class="pre-cop"></div>
 				<div class="cop">
 					<p>2015-<?= date('Y');?> Repositório CONNEPI. Desenvolvido por <a href="http://lattes.cnpq.br/6861906589576170" target="__blank" class="lattes" title="Lattes">Lucas Gabriel</a> e <a href="http://lattes.cnpq.br/1206492903523400" target="__blank" class="lattes" title="Lattes">Felipe Eloi</a></p>
 				</div>
