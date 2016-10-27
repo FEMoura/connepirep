@@ -86,16 +86,8 @@ if($form && $form['submit']){
 
 	  <nav class="navbar navbar-default">
 		  <div class="container-fluid">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
 		      <a class="navbar-brand" href="index.php">
-		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/ifal.jpg">
+		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/HEAD.png">
 		      </a>
 		    </div>
 	  </nav>
@@ -131,12 +123,7 @@ if($form && $form['submit']){
 			}
 		}
 		?>
-		
-			<div class="row text-center">
-				<h1>CONGRESSO NORTE NORDESTE DE PESQUISA E INOVAÇÃO</h1>
-				<h2>Repositório Digital</h2>
-		
-				<div class="col-md-12 col-lg-12">
+				<div class="col-md-12 col-lg-12 c">
 					<form action="index.php" method="post" enctype="multipart/form-data" style="background-color">
 						<div class="form-group col-lg-5 col-md-5">
 					    	<label class="sr-only" for="">Digite um termo para busca</label>
@@ -161,8 +148,7 @@ if($form && $form['submit']){
 					</form>
 		
 				</div>
-			</div>
-		
+				
 			<?php
 			if (!$resultado){
 			

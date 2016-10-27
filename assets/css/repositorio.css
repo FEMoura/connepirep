@@ -71,22 +71,19 @@
 	font-style: normal;
 }
 body{
-	background-image: url('../images/livros.png');
-	background-size: 1600px 100%;
+	background-image: url('../images/layout.png');
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 .c{
-	background-color: rgba(39, 174, 96, 0.8);
-	padding: 20px 0px;
-	padding-top: 30px;
+	margin-top: 200px;
 }
 .navbar-default{
 	background-color: #FFFFFF;
 	border-radius: 0px;
 	border-style: none;
 	box-shadow: 0px 0px 0px #FFFFFF;
-
-	padding: 20px 0px;
 }
 .inp{
 	height: 50px;
@@ -144,8 +141,9 @@ nav, .navbar-nav, .navbar-right, .login{
 	color: #FFFFFF!important;
 }
 .navbar-brand{
-	margin-top: -10px;
 	margin-bottom: 40px;
+	height: 50px;
+	
 }
 h1{
 	font-family: 'mb';
@@ -163,7 +161,6 @@ h2{
 	font-family: 'ml';
 }
 .img{
-	margin-left: 30px;
 }
 .btn-success{
 	background-color: #2ECC71;

@@ -117,9 +117,13 @@
  </div>
  
 <!-- Rodapé -->
-    <?php require_once('footer.php');?>
+   <div class="container-fluid">
+			<div class="row">
+				<div class="cop">
+					<p>2015-<?= date('Y');?> Repositório CONNEPI. Desenvolvido por <a href="http://lattes.cnpq.br/6861906589576170" target="__blank" class="lattes" title="Lattes">Lucas Gabriel</a> e <a href="http://lattes.cnpq.br/1206492903523400" target="__blank" class="lattes" title="Lattes">Felipe Eloi</a></p>
+				</div>
+			</div>
+		</div>
     </main>  
-    <?php require_once('assets-footer.php');?>
-
   </body>
 </html>
