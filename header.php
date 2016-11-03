@@ -1,33 +1,29 @@
-<div class="ls-topbar ">
+<!-- navbar da brand -->
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="index.php">
+		<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/HEAD.png">
+		</a>
+	</div>
+</nav>
 
-  <!-- Barra -->
-  <div class="ls-notification-topbar">
+<!-- navbar principal -->
 
-    <!-- Dropdown com detalhes da conta -->
-    <div data-ls-module="dropdown" class="ls-dropdown ls-user-account acc">
-      <a href="#" class="ls-ico-user">
-        <!-- <img src="images/locastyle/avatar-example.jpg" alt="" /> -->
-        <span class="ls-name" style="text-transform:uppercase;"><?php echo $userLogin['nome']; ?></span>
-      </a>
-
-      <nav class="ls-dropdown-nav ls-user-menu">
-        <ul>
-          <li><a href="perfil.php">Perfil</a></li>
-          <li><a href="logout.php">Sair</a></li>
-         </ul>
-      </nav>
-    </div>
-  </div>
-
-  <span class="ls-show-sidebar ls-ico-menu"></span>
-
-  <!-- Nome do produto/marca com sidebar -->
-    <h1 class="ls-brand-name">
-      <a href="painel.php" class="ls-ico-cog">
-        <small>Painel do administrador</small>
-        Repositório CONNEPI
-      </a>
-    </h1>
-
-  <!-- Nome do produto/marca sem sidebar quando for o pre-painel  -->
-</div>
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li><a href="#" role="button" aria-haspopup="true" aria-expanded="false">Sobre o CONNEPI</a></li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navegar por <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="#">EDIÇÕES</a></li>
+				<li><a href="#">ÁREAS</a></li>
+				<li><a href="#">INSTITUIÇÕES</a></li>
+			</ul>
+        </li>
+		<li><a href="download.php">Downloads</a></li>
+        <li><a href="painel.php">Estatísticas</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+		<li><a href="submeter.php">Submeter</a></li>
+        <li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
+    </ul>
+</nav>

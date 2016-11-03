@@ -7,63 +7,43 @@
 ?>
 <!DOCTYPE html>
 <html class="ls-theme-green ls-html-nobg">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Repositório CONNEPI</title>
-
-    <?php require_once('assets.php');?>
+	<?php require_once('assets.php');?>
 	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/repositorio1.css" rel="stylesheet">
-	<link href="assets/css/locastyle.css" rel="stylesheet">
-    <script src="assets/js/jquery-2.1.4.min.js"></script>
-	<script src="assets/js/high.js"></script>
-	<script src="assets/js/highex.js"></script>
-	<script src="assets/js/graphs.js"></script>
-	<script src="assets/js/locastyle.js"></script>
     
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <!-- Brand and toggle get grouped for better mobile display -->
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		      <a class="navbar-brand" href="index.php">
-		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/ifal.jpg">
-		      </a>
-		    </div>
-	  </nav>
-		<nav class="navbar navbar-inverse">
-      <ul class="nav navbar-nav">
-        <li><a href="#" role="button" aria-haspopup="true" aria-expanded="false">Sobre o CONNEPI</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navegar por <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">EDIÇÕES</a></li>
-            <li><a href="#">ÁREAS</a></li>
-            <li><a href="#">INSTITUIÇÕES</a></li>
-          </ul>
-        </li>
-		 <li><a href="#">Downloads</a></li>
-         <li><a href="painel.php">Estatísticas</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+</head>
+<body>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="index.php">
+		<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/HEAD.png">
+		</a>
+	</div>
+</nav>
+
+<!-- navbar principal -->
+
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+		<li><a href="index.php">Página Inicial</a></li>
+        <li><a href="about.php">Sobre o CONNEPI</a></li>
+		<li><a href="colections.php">Comunidades e Coleções</a><li>
+		<li><a href="download.php">Downloads</a></li>
+        <li><a href="painel.php">Estatísticas</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
 		<li><a href="submeter.php">Submeter</a></li>
         <li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
-      </ul>
-  </div>
+    </ul>
 </nav>
 
 <!-- Aqui começa o conteúdo -->
 
-<div class="container-fluid">
  <h1 class="ls-title-intro ls-ico-dashboard">Dashboards</h1>
 	<ul class="ls-tabs-nav">
 		<li class="ls-active"><a data-ls-module="tabs" href="#abaano">Publicações por Ano</a></li>
@@ -114,16 +94,22 @@
 			</div>
 		</div>
 	</div>
- </div>
  
 <!-- Rodapé -->
    <div class="container-fluid">
-			<div class="row">
-				<div class="cop">
-					<p>2015-<?= date('Y');?> Repositório CONNEPI. Desenvolvido por <a href="http://lattes.cnpq.br/6861906589576170" target="__blank" class="lattes" title="Lattes">Lucas Gabriel</a> e <a href="http://lattes.cnpq.br/1206492903523400" target="__blank" class="lattes" title="Lattes">Felipe Eloi</a></p>
-				</div>
+		<div class="row">
+			<div class="cop">
+				<p>2015-<?= date('Y');?> Repositório CONNEPI. Desenvolvido por <a href="http://lattes.cnpq.br/6861906589576170" target="__blank" class="lattes" title="Lattes">Lucas Gabriel</a> e <a href="http://lattes.cnpq.br/1206492903523400" target="__blank" class="lattes" title="Lattes">Felipe Eloi</a></p>
 			</div>
 		</div>
-    </main>  
-  </body>
+	</div>
+
+<!-- JS -->
+
+	<script src="assets/js/high.js"></script>
+	<script src="assets/js/highex.js"></script>
+	<script src="assets/js/graphs.js"></script>
+	<script src="assets/js/locastyle.js"></script>
+<!-------------------------------------------------->
+    </body>  
 </html>
