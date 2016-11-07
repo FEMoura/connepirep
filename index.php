@@ -38,6 +38,9 @@ if($form && $form['submit']){
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/repositorio.css" rel="stylesheet">
     <link href="assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
+	
 	<title>Repositório CONNEPI</title>
 	<link rel="icon" href="assets/images/if.png"></link>
 
@@ -198,7 +201,6 @@ if($form && $form['submit']){
 <!-- JavaScript no fim para carregar as páginas mais rapidamente-->
 	
     	<script src="assets/js/bootstrap.min.js"></script>
-		<script src="assets/js/jquery-2.1.4.min.js"></script>
-		<script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
 	</body>
 </html>
