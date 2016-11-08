@@ -18,9 +18,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="icon" href="assets/images/if.png">
 
     <title>Repositório CONNEPI - Página do Administrador</title>
@@ -64,19 +61,20 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="admin.php">Página Principal <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="admin.php"><span class="glyphicon glyphicon-home"></span> Página Principal <span class="sr-only">(current)</span></a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="listapublicacao.php">Publicações</a></li>
-            <li><a href="cadastropublicacao.php">Cadastrar Publicações</a></li>
-            <li><a href="sub.php">Submissões</a></li>
+            <li><a href="listapublicacao.php"><span class="glyphicon glyphicon-list-alt"></span> Publicações</a></li>
+            <li><a href="cadastropublicacao.php"><span class="glyphicon glyphicon-plus"></span> Cadastrar Publicações</a></li>
+            <li><a href="sub.php"><span class="glyphicon glyphicon-upload"></span> Submissões</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="perfil.php">Perfil</a></li>
-            <li><a href="cadastroperfil.php">Cadastrar Usuário</a></li>
-          </ul>
+			<li><a href="perfil.php"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</a></li>
+			<li><a href="cadastroperfil.php"><span class="glyphicon glyphicon-plus-sign"></span> Cadastrar Usuário</a></li>
+		  </ul>
         </div>
 	  </div>
+	  
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 align="center" class="page-header">Bem Vindo: <?php echo $userLogin['nome']; ?></h1>
 		  <p><img width="1100px" height="500px" src="assets/images/connepi-alagoas.png"></p>

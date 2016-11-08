@@ -168,16 +168,16 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li><a href="admin.php">Página Principal </a></li>
+            <li><a href="admin.php"><span class="glyphicon glyphicon-home"></span> Página Principal</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="listapublicacao.php">Publicações <span class="sr-only">(current)</span></a></li>
-            <li><a href="cadastropublicacao.php">Cadastrar Publicações</a></li>
-            <li><a href="sub.php">Submissões</a></li>
+            <li class="active"><a href="listapublicacao.php"><span class="glyphicon glyphicon-list-alt"></span> Publicações <span class="sr-only">(current)</span></a></li>
+            <li><a href="cadastropublicacao.php"><span class="glyphicon glyphicon-plus"></span> Cadastrar Publicações</a></li>
+            <li><a href="sub.php"><span class="glyphicon glyphicon-upload"></span> Submissões</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="perfil.php">Perfil</a></li>
-            <li><a href="cadastroperfil.php">Cadastrar Usuário</a></li>
+            <li><a href="perfil.php"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</a></li>
+            <li><a href="cadastroperfil.php"><span class="glyphicon glyphicon-plus-sign"></span> Cadastrar Usuário</a></li>
           </ul>
         </div>
 	  </div>
@@ -250,16 +250,18 @@
 			<th style="text-align:center;">Ano</th>
 			<th style="text-align:center;">Título</th>
 			<th style="text-align:center;">Autor(es)</th>
-			<th style="text-align:center;">Operações</th>
+			<th style="text-align:center;">Editar</th>
+			<th style="text-align:center;">Excluir</th>
 		</thead>
 		<tbody>';
 				
 				foreach ($read->getResult() as $pub){
 					echo '<tr>';
 						echo '<td style="text-align:center;">'.$pub['ano'].'</td>';
-						echo '<td>'.$pub['titulo'].'</td>';
-						echo '<td>'.$pub['autores'].'</td>';
-						echo '<td><a href="editarPublicacao.php?id='.$pub['id'].'" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a><a onclick="return confirmar();" href="listaPublicacao.php?e='.$pub['id'].'" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+						echo '<td style="text-align:center;">'.$pub['titulo'].'</td>';
+						echo '<td style="text-align:center;">'.$pub['autores'].'</td>';
+						echo '<td style="text-align:center;"><a href="editarPublicacao.php?id='.$pub['id'].'" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a></td>';
+						echo '<td style="text-align:center;"><a onclick="return confirmar();" href="listaPublicacao.php?e='.$pub['id'].'" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 							 </td>';
 					echo '</tr>';
 				

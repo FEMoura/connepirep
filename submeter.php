@@ -23,7 +23,7 @@ if ($form && $form ['submit']) {
 				'autores' => $_POST ['autores'],
 				'ies' => $_POST ['ies'],
 				'arquivo' => $upload->getResult(),
-				'aprovado' => 'S',
+				'aprovado' => 'N',
 				'area' => $_POST ['area'],
 				'keywords' => $_POST ['keywords']
 		];

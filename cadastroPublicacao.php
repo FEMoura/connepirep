@@ -50,22 +50,58 @@ if ($form && $form ['submit']) {
 
 ?>
 <!DOCTYPE html>
-<html class="ls-theme-green">
+<html lang="en">
   <head>
-    <title>Repositório Institucional - IFBA - VCA</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/images/if.png">
 
-    <?php require_once('assets.php');?>
-     
+    <title>Repositório CONNEPI - Página do Administrador</title>
+
+    <!-- CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
   </head>
   <body>
-
-    <?php require_once('header.php');?>
-
-    <?php require_once('aside.php');?>
-
-    <main class="ls-main ">
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
-        <h1 class="ls-title-intro ls-ico-plus">Cadastro de Publicação</h1>
+        <div class="navbar-header">
+          <a class="navbar-brand">Painel do Administrador</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.php">Página Inicial</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+		    <li><a href="perfil.php">Perfil</a></li>
+            <li><a href="logout.php">Sair</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="admin.php"><span class="glyphicon glyphicon-home"></span> Página Principal</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="listapublicacao.php"><span class="glyphicon glyphicon-list-alt"></span> Publicações</a></li>
+            <li class="active"><a href="cadastropublicacao.php"><span class="glyphicon glyphicon-plus"></span> Cadastrar Publicações <span class="sr-only">(current)</span></a></li>
+            <li><a href="sub.php"><span class="glyphicon glyphicon-upload"></span> Submissões</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="perfil.php"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</a></li>
+            <li><a href="cadastroperfil.php"><span class="glyphicon glyphicon-plus-sign"></span> Cadastrar Usuário</a></li>
+          </ul>
+        </div>
+	  </div>
+	  
+	<div class="container-fluid">
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		<h1><span class="glyphicon glyphicon-plus"></span> Cadastro de Publicação</h1>
 
 		<?php
 		if ($resultado){
@@ -79,59 +115,53 @@ if ($form && $form ['submit']) {
 		
 		<?php MSG('Todos os campos são obrigatórios!', RI_MSG_INFO) ?>
 
-		<form action="" name="cadExtensao" method="post"
-			enctype="multipart/form-data" class="ls-form ls-form-horizontal row">
+		<form action="" name="cadExtensao" method="post" enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="Título">Título:</label>
+				<input type="text" name="titulo" placeholder="Título da Publicação" class="form-control">
+			</div>
 
-			<label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Título:</b>
-		      <input type="text" name="titulo" placeholder="Título da Publicação" class="ls-field" required>
-		    </label>
+			<div class="form-group">
+				<label for="Autores">Autor(es):</label>
+				<input type="text" name="autores" placeholder="Autor(es)" class="form-control">
+			</div>
 
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Ano:</b>
-		      <input type="number" name="ano" placeholder="Ex: 2015" class="ls-field" required>
-		    </label>
+			<div class="form-group">
+				<label for="Ano">Ano:</label>
+				<input type="text" name="ano" placeholder="Ano" class="form-control">
+			</div>
 
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Autor(es):</b>
-		      <input type="text" name="autores" placeholder="Autor(es)" class="ls-field" required>
-		    </label>
+		    <div class="form-group">
+				<label for="ies">Instituição:</label>
+				<input type="text" name="ies" placeholder="Instituição" class="form-control" required>
+		    </div>
 
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Instituição:</b>
-		      <input type="text" name="ies" placeholder="Instituição" class="ls-field" required>
-		    </label>
+			<div class="form-group">
+				<label for="area">Área:</label>
+					<select class="form-control inp" name="area" required>
+						<option value="Ciências Agrárias" selected>Ciências Agrárias</option>
+						<option value="Ciências Biológicas">Ciências Biológicas</option>
+						<option value="Ciências da Saúde">Ciências da Saúde</option>
+						<option value="Ciências Exatas e da Terra">Ciências Exatas e da Terra</option>	
+						<option value="Ciências Humanas">Ciências Humanas</option>
+						<option value="Ciências Sociais e Aplicadas">Ciências Sociais e Aplicadas</option>
+						<option value="Engenharias">Engenharias</option>
+						<option value="Linguística, Letras e Artes">Linguística, Letras e Artes</option>
+						<option value="Multidisciplinar">Multidisciplinar</option>
+					</select>
+			</div>
 
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Área</b>
-		      <select class="form-control inp" name="area" required>
-				<option value="Ciências Agrárias" selected>Ciências Agrárias</option>
-				<option value="Ciências Biológicas">Ciências Biológicas</option>
-				<option value="Ciências da Saúde">Ciências da Saúde</option>
-				<option value="Ciências Exatas e da Terra">Ciências Exatas e da Terra</option>	
-				<option value="Ciências Humanas">Ciências Humanas</option>
-				<option value="Ciências Sociais e Aplicadas">Ciências Sociais e Aplicadas</option>
-				<option value="Engenharias">Engenharias</option>
-				<option value="Linguística, Letras e Artes">Linguística, Letras e Artes</option>
-				<option value="Multidisciplinar">Multidisciplinar</option>
-			  </select>
-		    </label>
+		    <div class="form-group">
+				<label for="file">Arquivo:</label>
+				<input type="file" name="publicacao" accept="application/pdf" class="form-control" required>
+		    </div>			
 
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Arquivo:</b>
-		      <input type="file" name="publicacao" accept="application/pdf" class="ls-field" required>
-		    </label>			
-
-			<input type="submit" class="ls-btn-primary ls-btn-lg ls-text-uppercase col-lg-4 col-xs-11 col-lg-push-4 botao-p" name="submit" value="Cadastrar" />
+			<div class="botao">
+			<input type="submit" class="btn btn-primary botaoEnviar" name="submit" value="Cadastrar"/>
+			</div>
 			
 		</form>
-	
+		</div>
 	</div>
-      <?php require_once('footer.php');?>
-    </main>
-
-    
-    <?php require_once('assets-footer.php');?>
-
   </body>
 </html>
