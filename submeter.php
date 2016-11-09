@@ -1,5 +1,5 @@
 ﻿<?php 
-
+session_start();
 require 'app/Config.inc.php';
 
 $resultado = false;
@@ -77,13 +77,24 @@ if ($form && $form ['submit']) {
     <ul class="nav navbar-nav">
 		<li><a href="index.php">Página Inicial</a></li>
         <li><a href="about.php">Sobre o CONNEPI</a></li>
-		<li><a href="colections.php">Comunidades e Coleções</a><li>
+		<li><a href="colections.php">Comunidades e Coleções</a></li>
 		<li><a href="download.php">Downloads</a></li>
         <li><a href="painel.php">Estatísticas</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-		<li><a href="submeter.php">Submeter</a></li>
-        <li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
+		<li><a href="submeter.php"><span class="glyphicon glyphicon-cloud-upload"></span> Submeter</a></li>
+
+<?php
+$login = new Login();
+if(!$login->CheckLogin()){
+		unset($_SESSION['userlogin']);
+	echo '<li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>';
+	}
+else
+	{
+	echo '<li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> ADMIN</a></li>';
+	}
+?>
     </ul>
 </nav>
 

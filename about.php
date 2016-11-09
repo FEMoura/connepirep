@@ -1,3 +1,5 @@
+<?php require 'app/Config.inc.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -47,8 +49,20 @@
         <li><a href="painel.php">Estatísticas</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-		<li><a href="submeter.php">Submeter</a></li>
-        <li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
+		<li><a href="submeter.php"><span class="glyphicon glyphicon-cloud-upload"></span> Submeter</a></li>
+
+<?php
+session_start();
+$login = new Login();
+if(!$login->CheckLogin()){
+		unset($_SESSION['userlogin']);
+	echo '<li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>';
+	}
+else
+	{
+	echo '<li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> ADMIN</a></li>';
+	}
+?>
     </ul>
 </nav>
 
@@ -107,7 +121,7 @@
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
+<div class="geral">
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
@@ -173,17 +187,16 @@
 
       <!-- FOOTER -->
 	
-<div class="container-fluid">
+	<footer class="container-fluid">
 	<div class="row">
 		<div class="cop">
 			<p>2015-<?= date('Y');?> Repositório CONNEPI. Desenvolvido por <a href="http://lattes.cnpq.br/6861906589576170" target="__blank" class="lattes" title="Lattes">Lucas Gabriel</a> e <a href="http://lattes.cnpq.br/1206492903523400" target="__blank" class="lattes" title="Lattes">Felipe Eloi</a></p>
 		</div>
 	</div>
-</div>
+	</footer>
+</div><!-- /.geral -->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Bootstrap core JavaScript -->
     <script src="assets/js/jquery-2.1.4.min.js"></script>
     <script>window.jQuery || document.write('<script src="assets/js/jquery-2.1.4.min.js"><\/script>')</script>
     <script src="assets/js/bootstrap.min.js"></script>

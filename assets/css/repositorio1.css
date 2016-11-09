@@ -70,6 +70,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.geral {
+	min-height:100%;
+	position:relative;
+}
+.footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+html, body {height:100%;}
 .c{
 	background-color: rgba(39, 174, 96, 0.8);
 	padding: 20px 0px;

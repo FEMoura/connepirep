@@ -80,10 +80,18 @@ body{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
+.geral {
+	min-height:100%;
+	position:relative;
+}
+.footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
 .c{
 	margin-top: 200px;
 }
-
 .ls-download{
 	width:400px;
 	height: 300px;
@@ -124,7 +132,7 @@ body{
 	margin-bottom: 140px;
 }
 a{
-	color: #27ae60;
+	color: #4682B4;
 }
 a:hover{
 	color: #2C3E50;
@@ -156,7 +164,6 @@ nav, .navbar-nav, .navbar-right, .login{
 h1{
 	font-family: 'mb';
 	font-size: 30px;
-	margin-top: 100px;
 	color: #000000;
 }
 h2{
@@ -164,6 +171,15 @@ h2{
 	font-size: 25px;
 	color: #CD1313;
 	/*text-shadow: 0px 5px 8px #1f914f;*/
+}
+h3{
+	font-family: 'ml';
+	font-size: 25px;
+	color: #CD1313;
+	/*text-shadow: 0px 5px 8px #1f914f;*/
+}
+h4{
+	margin-left:15px;
 }
 .ft{
 	font-family: 'ml';
@@ -253,11 +269,17 @@ h2{
 	font-weight: bold;
 }
 .download{
-	text-align:center;
+	text-align: center;
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
-
+.colection{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.label-as-badge{
+	border-radius:15px;	
+}
 .alert{
 	border-style: none;
 	border-radius:0px;

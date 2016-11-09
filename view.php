@@ -19,6 +19,7 @@ if (isset($_GET['id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <title>Repositório CONNEPI</title>
+	<link rel="icon" href="assets/images/if.png"></link>
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/repositorio.css" rel="stylesheet">
