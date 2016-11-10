@@ -70,15 +70,32 @@
 	font-weight: normal;
 	font-style: normal;
 }
+html{
+	height:100%;
+}
 body{
+	height: 100%;
 	background-image: url('../images/layout.png');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
+.geral {
+	min-height:100%;
+	position:relative;
+}
+.footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
 .c{
 	margin-top: 200px;
 }
+.ls-download{
+	width:400px;
+	height: 300px;
+}	
 .navbar-default{
 	background-color: #FFFFFF;
 	border-radius: 0px;
@@ -98,7 +115,7 @@ body{
 	color: #FFFFFF;
 }
 .bt-lg:hover{
-	background-color: #2ecc71;
+	background-color: #FF0000;
 	box-shadow: 0px 4px 10px #FFFFFF;
 	color: #FFFFFF;
 }
@@ -115,7 +132,7 @@ body{
 	margin-bottom: 140px;
 }
 a{
-	color: #27ae60;
+	color: #4682B4;
 }
 a:hover{
 	color: #2C3E50;
@@ -137,18 +154,16 @@ nav, .navbar-nav, .navbar-right, .login{
 	color: #FFFFFF!important;
 }
 .login:hover{
-	background-color: #2ECC71!important;
+	background-color: #FF0000!important;
 	color: #FFFFFF!important;
 }
 .navbar-brand{
 	margin-bottom: 40px;
 	height: 50px;
-	
 }
 h1{
 	font-family: 'mb';
 	font-size: 30px;
-	margin-top: 100px;
 	color: #000000;
 }
 h2{
@@ -157,13 +172,22 @@ h2{
 	color: #CD1313;
 	/*text-shadow: 0px 5px 8px #1f914f;*/
 }
+h3{
+	font-family: 'ml';
+	font-size: 25px;
+	color: #CD1313;
+	/*text-shadow: 0px 5px 8px #1f914f;*/
+}
+h4{
+	margin-left:15px;
+}
 .ft{
 	font-family: 'ml';
 }
 .img{
 }
 .btn-success{
-	background-color: #2ECC71;
+	background-color: #000000;
 	border-style: none;
 }
 .abc{
@@ -194,7 +218,7 @@ h2{
 	/*text-decoration: none;*/
 }
 .contor{
-	background-color: rgba(236, 240, 241, 0.9);
+	background-color: #FF6347;
 	padding: 70px 10px;
 	box-shadow: 0px 4px 10px #27ae60;
 	margin-top: 15px;
@@ -211,12 +235,12 @@ h2{
 	width: 100%;
 	font-family: 'gb';
 	text-transform: uppercase;
-	background-color: #2ecc71;
+	background-color: #000000;
 	border-style: none;
 	color: #FFFFFF;
 }
 .bt-entrar:hover{
-	background-color: #2c3e50;
+	background-color: #696969;
 	/*box-shadow: 0px 4px 10px #1f914f;*/
 	color: #FFFFFF;
 }
@@ -245,11 +269,17 @@ h2{
 	font-weight: bold;
 }
 .download{
-	text-align:center;
+	text-align: center;
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
-
+.colection{
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.label-as-badge{
+	border-radius:15px;	
+}
 .alert{
 	border-style: none;
 	border-radius:0px;

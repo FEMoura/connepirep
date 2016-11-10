@@ -47,23 +47,64 @@
     
 ?>
 <!DOCTYPE html>
-<html class="ls-theme-green">
+<html lang="en">
   <head>
-    <title>Repositório CONNEPI</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/images/if.png">
 
-    <?php require_once('assets.php');?>
+    <title>Repositório CONNEPI - Página do Administrador</title>
 
+    <!-- CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
   </head>
   <body>
-
-    <?php require_once('header.php');?>
-
-    <?php 
-    	require_once('aside.php');
-    ?>
-    <main class="ls-main">
+  
+  <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
-        <h1 class="ls-title-intro ls-ico-cog">Perfil</h1>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Painel do Administrador</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.php">Página Inicial</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+		    <li><a href="perfil.php">Perfil</a></li>
+            <li><a href="logout.php">Sair</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="admin.php"><span class="glyphicon glyphicon-home"></span> Página Principal</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="listapublicacao.php"><span class="glyphicon glyphicon-list-alt"></span> Publicações</a></li>
+            <li><a href="cadastropublicacao.php"><span class="glyphicon glyphicon-plus"></span> Cadastrar Publicações</a></li>
+            <li><a href="sub.php"><span class="glyphicon glyphicon-upload"></span> Submissões</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+			<li class="active"><a href="perfil.php"><span class="glyphicon glyphicon-edit"></span> Editar Perfil <span class="sr-only">(current)</span></a></li>
+			<li><a href="cadastroperfil.php"><span class="glyphicon glyphicon-plus-sign"></span> Cadastrar Usuário</a></li>
+		  </ul>
+        </div>
+	  </div>
+	  
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <div class="container-fluid">
+        <h1><span class="glyphicon glyphicon-edit"></span> Editar Perfil</h1>
         
         <?php
 		if ($resultado){
@@ -73,33 +114,29 @@
 		}
 		?>
         
-        <form action="" method="post" enctype="multipart/form-data" class="ls-form ls-form-horizontal row">
+        <form action="" method="post" enctype="multipart/form-data">
 
-			<label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Nome:</b>
-		      <input type="text" name="nome" placeholder="Nome" class="ls-field" value="<?= $busca->getResult()[0]['nome']; ?>" required>
-		    </label>
+			<div class="form-group">
+				<label for="name">Nome:</label>
+				<input type="text" name="nome" placeholder="Primeiro Nome" class="form-control" value="<?= $busca->getResult()[0]['nome']; ?>" required>
+		    </div>
 		    
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Usuário:</b>
-		      <input type="text" name="login" placeholder="Usuário" class="ls-field" value="<?= $busca->getResult()[0]['login']; ?>" required>
-		    </label>
+		    <div class="form-group">
+		      <label for="user">Usuário:</label>
+		      <input type="text" name="login" placeholder="Usuário" class="form-control" value="<?= $busca->getResult()[0]['login']; ?>" required>
+		    </div>
 
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Senha:</b>
-		      <input type="text" name="senha" placeholder="Senha" class="ls-field" required>
-		    </label>
+		    <div class="form-group">
+		      <label for="user">Senha:</label>
+		      <input type="password" name="senha" placeholder="Senha" class="form-control" required>
+		    </div>
 
-			<input type="submit" class="ls-btn-primary ls-btn-lg ls-text-uppercase col-lg-4 col-xs-11 col-lg-push-4 botao-p" name="submit" value="Salvar" />
+			<div class="botao">
+			<input type="submit" class="btn btn-primary botaoEnviar" name="submit" value="Salvar"/>
+			</div>
 			
-		</form>
-                     
-        <!-- Fim Conteúdo -->
+		</form> 
       </div>
-      <?php require_once('footer.php');?>
-    </main>
-
-    <?php require_once('assets-footer.php');?>
-
+    </div>
   </body>
 </html>

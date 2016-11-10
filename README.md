@@ -1,6 +1,6 @@
-﻿# RI-Br [Sistema Web de Repositório Institucional]
+﻿# Repositório Connepi [Sistema Web de Repositório Do Connepi]
 
-Este é um Projeto de Repositório Institucional com foco no gerenciamento de Pesquisa, Extensão e Publicações.
+Este é um Projeto de Repositório para armazenar as publicações científicas do CONNEPI
 
 ### Tecnologias Utilizadas<br>
 * PHP<br>
@@ -13,15 +13,11 @@ Este é um Projeto de Repositório Institucional com foco no gerenciamento de Pe
 ### Funcionalidades<br>
   * Relatórios<br>
   * Gráficos<br>
-  * CRUD (Create, Read, Update e Delete) Pesquisa<br>
-  * CRUD (Create, Read, Update e Delete) Extensão<br>
   * CRUD (Create, Read, Update e Delete) Publicação<br>
   * Formulário para Submissão de Publicação<br>
   * Painel Administrativo<br>
 
 ### Desenvolvedores<br>
 ---------------------------
-<a href="https://github.com/brenolessa">Breno Andrade @brenolessa</a><br>
-<a href="https://github.com/moarabrito">Moara Brito @moarabritto</a><br>
-
-teste
+<a href="https://github.com/femoura">Felipe Moura</a><br>
+<a href="https://github.com/principeluke">Lucas Gabriel</a><br>

@@ -53,10 +53,8 @@ if (isset($_POST['titulo'])){
 				
 				$dados = [
 						'titulo' => $_POST ['titulo'],
-						'resumo' => $_POST ['resumo'],
 						'ano' => $_POST ['ano'],
 						'autores' => $_POST ['autores'],
-						'evento' => $_POST ['evento'],
 						'area' => $_POST ['area'],
 						'arquivo' => $upload->getResult()
 				];
@@ -80,10 +78,8 @@ if (isset($_POST['titulo'])){
 			
 			$dados = [
 					'titulo' => $_POST ['titulo'],
-					'resumo' => $_POST ['resumo'],
 					'ano' => $_POST ['ano'],
 					'autores' => $_POST ['autores'],
-					'evento' => $_POST ['evento'],
 					'area' => $_POST ['area']
 			];
 								
@@ -102,85 +98,96 @@ if (isset($_POST['titulo'])){
 }
 ?>
 <!DOCTYPE html>
-<html class="ls-theme-green">
-  <head>
-    <title>Repositório Institucional - IFBA - VCA</title>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="assets/images/if.png">
+	<title>Repositório CONNEPI - Página do Administrador</title>
 
-    <?php require_once('assets.php');?>
-     
-  </head>
-  <body>
+	<!-- CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/dashboard.css" rel="stylesheet">
 
-    <?php require_once('header.php');?>
-
-    <?php require_once('aside.php');?>
-
-    <main class="ls-main ">
-      <div class="container-fluid">
-        <h1 class="ls-title-intro ls-ico-pencil2">Editar Publicação</h1>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	 <div class="container-fluid">
+      <div class="navbar-header">
+       <a class="navbar-brand">Painel do Administrador</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+			<li><a href="index.php">Página Inicial</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+			<li><a href="perfil.php">Perfil</a></li>
+            <li><a href="logout.php">Sair</a></li>
+		</ul>
+      </div>
+    </nav>
+		<div class="container-fluid">
+		 <div class="row">
+          <div class="col-sm-3 col-md-2 sidebar">
+           <ul class="nav nav-sidebar">
+			<li><a href="admin.php"><span class="glyphicon glyphicon-home"></span> Página Principal</a></li>
+           </ul>
+           <ul class="nav nav-sidebar">
+			<li class="active"><a href="listapublicacao.php"><span class="glyphicon glyphicon-list-alt"></span> Publicações <span class="sr-only">(current)</span></a></li>
+            <li><a href="cadastropublicacao.php"><span class="glyphicon glyphicon-plus"></span> Cadastrar Publicações</a></li>
+            <li><a href="sub.php"><span class="glyphicon glyphicon-upload"></span> Submissões</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="perfil.php"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</a></li>
+            <li><a href="cadastroperfil.php"><span class="glyphicon glyphicon-plus-sign"></span> Cadastrar Usuário</a></li>
+          </ul>
+        </div>
+	  </div>
+	  
+<div class="container-fluid">
+	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		<h1><span class="glyphicon glyphicon-pencil"></span> Editar Publicação</h1>
         
-        <?php
-		if ($resultado){
+<?php
+	if ($resultado){
+		MSG("Atualizado com sucesso!", RI_MSG_SUCCESS);
+   }else if ($texto != null) {
+		MSG($texto, RI_MSG_DANGER);
+}?>
+
+	<form action="editarPublicacao.php?id=<?= $i ?>" name="" method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<label for="Título">Título:</label>
+		    <input type="text" name="titulo" placeholder="Título da Publicação" value="<?php echo $busca->getResult()[0]['titulo']; ?>" class="form-control" required>
+		</div>
 		
-			MSG("Atualizado com sucesso!", RI_MSG_SUCCESS);
+		<div class="form-group">
+			<label for="Autores">Autor(es):</label>
+		    <input type="text" name="autores" placeholder="Autor(es)" value="<?php echo $busca->getResult()[0]['autores']; ?>" class="form-control" required>
+		</div>
 		
-		} else if ($texto != null) {
-			MSG($texto, RI_MSG_DANGER);
-		}
-		?>
+		<div class="form-group">
+			<label for="Ano">Ano:</label>
+		    <input type="number" name="ano" placeholder="Ex: 2015" value="<?php echo $busca->getResult()[0]['ano']; ?>" class="form-control" required>
+		</div>
 
-        <form action="editarPublicacao.php?id=<?= $i ?>" name="" method="post"
-			enctype="multipart/form-data" class="ls-form ls-form-horizontal row">
+		<div class="form-group">
+			<label for="Area">Área:</label>
+		    <input type="text" name="area" placeholder="Área" class="form-control" value="<?php echo $busca->getResult()[0]['area']; ?>" required>
+		</div>
+		
+		<div class="form-group">
+		    <label for="Arquivo">Arquivo:</label>
+		    <input type="file" name="publicacao" accept="application/pdf" class="form-control">
+		</div>			
 
-			<label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Título:</b>
-		      <input type="text" name="titulo" placeholder="Título da Publicação" value="<?php echo $busca->getResult()[0]['titulo']; ?>" class="ls-field" required>
-		    </label>
-
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Resumo:</b>
-		      <textarea name="resumo" placeholder="Resumo" rows="10" class="ls-field" required><?php echo $busca->getResult()[0]['resumo']; ?></textarea>
-		    </label>
-
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Ano:</b>
-		      <input type="number" name="ano" placeholder="Ex: 2015" value="<?php echo $busca->getResult()[0]['ano']; ?>" class="ls-field" required>
-		    </label>
-
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Autor(es):</b>
-		      <input type="text" name="autores" placeholder="Autor(es)" value="<?php echo $busca->getResult()[0]['autores']; ?>" class="ls-field" required>
-		    </label>
-
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Evento:</b>
-		      <input type="text" name="evento" placeholder="Evento" class="ls-field" value="<?php echo $busca->getResult()[0]['evento']; ?>" required>
-		    </label>
-
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Área</b>
-		      <input type="text" name="area" placeholder="Área" class="ls-field" value="<?php echo $busca->getResult()[0]['area']; ?>" required>
-		    </label>
-
-		    <label class="ls-label col-lg-12 col-xs-12">
-		      <b class="ls-label-text">Arquivo:</b>
-		      <input type="file" name="publicacao" accept="application/pdf" class="ls-field">
-		    </label>			
-
-			<!-- <div class="ls-actions-btn col-lg-12 col-xs-12">
-				<input type="submit" class="ls-btn" name="submit" value="Atualizar" />
-			</div> -->
-
-			<input type="submit" class="ls-btn-primary ls-btn-lg ls-text-uppercase col-lg-4 col-xs-11 col-lg-push-4 botao-p" name="submit" value="Atualizar" />
-
-		</form>
+		<div class="botao">
+		<input type="submit" class="btn btn-primary botaoEnviar" name="submit" value="Atualizar"/>
+		</div>
+	</form>
 	
 	</div>
-      <?php require_once('footer.php');?>
-    </main>
-
-    
-    <?php require_once('assets-footer.php');?>
-
-  </body>
+</div>
+</body>
 </html>

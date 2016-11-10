@@ -1,10 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
 
-<?php 
-
+<?php
+session_start();
 require 'app/Config.inc.php';
-
 $read = new Read();
 $resultado = true;
 
@@ -38,13 +37,12 @@ if($form && $form['submit']){
 	
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/repositorio.css" rel="stylesheet">
-
-    <script src="assets/js/jquery-2.1.4.min.js"></script>
-    <script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <link href="assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
 	
 	<title>Repositório CONNEPI</title>
-	<link rel="shortcut icon" type="image/x-icon" href="if.png" />
+	<link rel="icon" href="assets/images/if.png"></link>
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -82,38 +80,50 @@ if($form && $form['submit']){
 	</script>
 
   </head>
-  <body>
-
-	  <nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		      <a class="navbar-brand" href="index.php">
-		      	<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/HEAD.png">
-		      </a>
-		    </div>
-	  </nav>
-		<nav class="navbar navbar-inverse">
-      <ul class="nav navbar-nav">
-        <li><a href="#" role="button" aria-haspopup="true" aria-expanded="false">Sobre o CONNEPI</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Navegar por <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">EDIÇÕES</a></li>
-            <li><a href="#">ÁREAS</a></li>
-            <li><a href="#">INSTITUIÇÕES</a></li>
-          </ul>
-        </li>
-		 <li><a href="#">Downloads</a></li>
-         <li><a href="painel.php">Estatísticas</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-		<li><a href="submeter.php">Submeter</a></li>
-        <li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>
-      </ul>
-  </div>
+<body>
+  
+<!-- navbar da brand -->
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="index.php">
+		<img alt="Repositório do CONNEPI - Desenvolvido no IFAL" class="img-responsive img" src="assets/images/HEAD.png">
+		</a>
+	</div>
 </nav>
-		<div class="container abc">
-		<?php 
-		$get = filter_input(INPUT_GET, 'exe', FILTER_DEFAULT);
+
+<!-- navbar principal -->
+
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+		<li><a href="index.php">Página Inicial</a></li>
+        <li><a href="about.php">Sobre o CONNEPI</a></li>
+		<li><a href="colections.php">Comunidades e Coleções</a></li>
+		<li><a href="download.php">Downloads</a></li>
+        <li><a href="painel.php">Estatísticas</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+		<li><a href="submeter.php"><span class="glyphicon glyphicon-cloud-upload"></span> Submeter</a></li>
+
+<?php
+$login = new Login();
+if(!$login->CheckLogin()){
+		unset($_SESSION['userlogin']);
+	echo '<li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> Login</a></li>';
+	}
+else
+	{
+	echo '<li class="li-login"><a href="login.php" class="login" title="Área do Administrador"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> ADMIN</a></li>';
+	}
+?>
+    </ul>
+</nav>
+ 
+<!-- Início da barra de busca -->
+
+<div class="container abc">
+
+<?php
+	$get = filter_input(INPUT_GET, 'exe', FILTER_DEFAULT);
 		if (!empty($get)){
 			if ($get == 'restrito'){
 				MSG('Acesso negado: Por favor efetue login para acessar o Painel!', RI_MSG_DANGER);
@@ -122,37 +132,37 @@ if($form && $form['submit']){
 				MSG('Sucesso ao deslogar: Sua sessão foi finalizada. Volte sempre!', RI_MSG_SUCCESS);
 			}
 		}
-		?>
-				<div class="col-md-12 col-lg-12 c">
-					<form action="index.php" method="post" enctype="multipart/form-data" style="background-color">
-						<div class="form-group col-lg-5 col-md-5">
-					    	<label class="sr-only" for="">Digite um termo para busca</label>
-							<input type="search" class="form-control inp" name="busca" id="" placeholder="Digite um termo para pesquisar..." required>
-						</div>
+?>
+
+	<div class="col-md-12 col-lg-12 c">
+		<form action="index.php" method="post" enctype="multipart/form-data" style="background-color">
+			<div class="form-group col-lg-5 col-md-5">
+				<label class="sr-only" for="">Digite um termo para busca</label>
+				<input type="search" class="form-control inp" name="busca" id="" placeholder="Digite um termo para pesquisar..." required>
+			</div>
 		
-		
-						<div class="form-group col-lg-4 col-md-4">
-							<select class="form-control inp" name="tipo">
-								<option value="area">Área</option>
-								<option value="titulo" selected>Título</option>
-								<option value="autores">Autor</option>
-								<option value="ano">Ano</option>
-								<option value="keywords">Palavras-Chave</option>
-							</select>
-						</div>
+			<div class="form-group col-lg-4 col-md-4">
+				<select class="form-control inp" name="tipo">
+					<option value="area">Área</option>
+					<option value="titulo" selected>Título</option>
+					<option value="autores">Autor</option>
+					<option value="ano">Ano</option>
+					<option value="keywords">Palavras-Chave</option>
+				</select>
+			</div>
 						
-						<div class="form-group col-lg-3 col-md-3">
-							<input type="submit" class="btn btn-default inp bt-lg" name="submit" value="Pesquisar">
-						</div>
+			<div class="form-group col-lg-3 col-md-3">
+				<input type="submit" class="btn btn-default inp bt-lg" name="submit" value="Pesquisar">
+			</div>
 		
-					</form>
+		</form>
 		
-				</div>
+	</div>
 				
-			<?php
-			if (!$resultado){
-			
-				MSG("Nenhum resultado encontrado!", RI_MSG_DANGER);
+<?php
+
+	if (!$resultado){
+		MSG("Nenhum resultado encontrado!", RI_MSG_DANGER);
 			
 			}
 			else if ($read->getResult()){
@@ -189,7 +199,7 @@ if($form && $form['submit']){
 				
 			}
 			?>
-		</div>
+</div>
 
 		<div class="container-fluid">
 			<div class="row">
@@ -198,6 +208,8 @@ if($form && $form['submit']){
 				</div>
 			</div>
 		</div>
+
+<!-- JavaScript no fim para carregar as páginas mais rapidamente-->
 	
     	<script src="assets/js/bootstrap.min.js"></script>
 

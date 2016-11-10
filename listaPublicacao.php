@@ -26,7 +26,7 @@
 	
 		if (isset($form['submit'])){
 
-			if ((!$_POST['titulo']) && (!$_POST['autores']) && (!$_POST['evento'])){
+			if ((!$_POST['titulo']) && (!$_POST['autores']) && (!$_POST['ano'])){
 				$mensagem = "Informe um dos campos para pesquisar!";
 				$tipo = RI_MSG_DANGER;		
 				
@@ -50,10 +50,10 @@
 				}
 				
 			}
-			else if (($_POST['evento'])){
-				//echo "Evento";
+			else if (($_POST['ano'])){
+				//echo "Ano";
 								
-				$read->FullRead("SELECT * FROM publicacao WHERE evento LIKE :like AND aprovado = 'S'", "like={$_POST['evento']}%");
+				$read->FullRead("SELECT * FROM publicacao WHERE ano LIKE :like AND aprovado = 'S'", "like={$_POST['ano']}%");
 				if(!$read->getResult()){
 					$resultado = false;
 				}
@@ -89,16 +89,20 @@
 	
 ?>
 <!DOCTYPE html>
-<html class="ls-theme-green">
+<html lang="en">
   <head>
-    <title>Repositório Institucional - IFBA - VCA</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/images/if.png">
 
-    <?php require_once('assets.php');?>
+    <title>Repositório CONNEPI - Página do Administrador</title>
 
-    <script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
-    <link href="assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <!-- CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
 
-    <script type="text/javascript">
+	<script type="text/javascript">
 		function confirmar(){
 			var x = confirm("Deseja realmente excluir?");
 			if(x == true){
@@ -108,7 +112,6 @@
 				return false;
 		}
 	</script>
-
 	<script type="text/javascript">
 		$(document).ready(function() {
 
@@ -137,42 +140,74 @@
 		});
 	</script>
 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
+  
   <body>
-
-    <?php require_once('header.php');?>
-
-    <?php require_once('aside.php');?>
-
-    <main class="ls-main ">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
-        <h1 class="ls-title-intro ls-ico-search">Pesquisar Publicação</h1>
+        <div class="navbar-header">
+          <a class="navbar-brand">Painel do Administrador</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.php">Página Inicial</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+		    <li><a href="perfil.php">Perfil</a></li>
+            <li><a href="logout.php">Sair</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="admin.php"><span class="glyphicon glyphicon-home"></span> Página Principal</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="listapublicacao.php"><span class="glyphicon glyphicon-list-alt"></span> Publicações <span class="sr-only">(current)</span></a></li>
+            <li><a href="cadastropublicacao.php"><span class="glyphicon glyphicon-plus"></span> Cadastrar Publicações</a></li>
+            <li><a href="sub.php"><span class="glyphicon glyphicon-upload"></span> Submissões</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="perfil.php"><span class="glyphicon glyphicon-edit"></span> Editar Perfil</a></li>
+            <li><a href="cadastroperfil.php"><span class="glyphicon glyphicon-plus-sign"></span> Cadastrar Usuário</a></li>
+          </ul>
+        </div>
+	  </div>
+	  
+    <div class="container-fluid">
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h1><span class="glyphicon glyphicon-search"></span> Pesquisar Publicações</h1>
+			<h4>Lista de publicações cadastradas</h4>
 		
 		<?php MSG('Informe apenas um dos campos para pesquisar', RI_MSG_WARNING) ?>
 		
-	<form action="listaPublicacao.php" name="cadPublicacao" method="post" enctype="multipart/form-data" class="ls-form ls-form-horizontal row">
+	<form action="listaPublicacao.php" name="cadPublicacao" method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<label for="Título">Título:</label>
+			<input type="text" name="titulo" placeholder="Título da Publicação" class="form-control">
+	    </div>
 
-		<label class="ls-label col-lg-12 col-xs-12">
-	      <b class="ls-label-text">Título:</b>
-	      <input type="text" name="titulo" placeholder="Título da Publicação" class="ls-field">
-	    </label>
+		<div class="form-group">
+			<label for="Autores">Autor(es):</label>
+			<input type="text" name="autores" placeholder="Autor(es)" class="form-control">
+	    </div>
 
-	    <label class="ls-label col-lg-12 col-xs-12">
-	      <b class="ls-label-text">Autor(es):</b>
-	      <input type="text" name="autores" placeholder="Autor(es)" class="ls-field">
-	    </label>
-
-	    <label class="ls-label col-lg-12 col-xs-12">
-	      <b class="ls-label-text">Evento:</b>
-	      <input type="text" name="evento" placeholder="Evento" class="ls-field">
-	    </label>
-
-		<!-- <div class="ls-actions-btn col-lg-12 col-xs-12 col-lg-push-4">
-			<input type="submit" class="ls-btn-primary botao-pesq" name="submit" value="Pesquisar" />
-		</div> -->
-
-		<input type="submit" class="ls-btn-primary ls-btn-lg ls-text-uppercase col-lg-4 col-xs-11 col-lg-push-4 botao-pesq" name="submit" value="Pesquisar" />
-
+	    <div class="form-group">
+			<label for="Ano">Ano:</label>
+			<input type="text" name="ano" placeholder="Ano" class="form-control">
+	    </div>
+		
+		<div class="botao">
+		<input type="submit" class="btn btn-primary botaoEnviar" name="submit" value="Pesquisar" />
+		</div>
 	</form>
 	
 	<div class="col-lg-12 col-xs-12">
@@ -195,7 +230,7 @@
 		?>
 	</div>
 	
-	<div class="col-lg-12 col-xs-12">
+	<div class="col-lg-12 col-xs-12 nfound">
 		<?php 
 		if (!$resultado){
 				
@@ -210,22 +245,23 @@
 	<?php
 		if ($read->getResult()){
 	echo'
-	<table class="ls-table ls-bg-header ls-table-striped ls-table-bordered display" cellspacing="0" cellpadding="0" border="0" id="tb1">
+	<table class="table table-striped" border="0" id="tb1">
 		<thead>
+			<th style="text-align:center;">Ano</th>
 			<th style="text-align:center;">Título</th>
-			<th style="text-align:center;">Autor (es)</th>
-			<th style="text-align:center;">Evento</th>
-			<th style="text-align:center;">Operações</th>
+			<th style="text-align:center;">Autor(es)</th>
+			<th style="text-align:center;">Editar</th>
+			<th style="text-align:center;">Excluir</th>
 		</thead>
 		<tbody>';
 				
 				foreach ($read->getResult() as $pub){
 					echo '<tr>';
-						echo '<td style="text-align:justify;">'.$pub['titulo'].'</td>';
+						echo '<td style="text-align:center;">'.$pub['ano'].'</td>';
+						echo '<td style="text-align:center;">'.$pub['titulo'].'</td>';
 						echo '<td style="text-align:center;">'.$pub['autores'].'</td>';
-						echo '<td style="text-align:center;">'.$pub['evento'].'</td>';
-						echo '<td style="text-align:center;"><a href="editarPublicacao.php?id='.$pub['id'].'" class="ls-btn ls-ico-edit-admin bt-editar" title="Editar"></a>
-								  <a onclick="return confirmar();" href="listaPublicacao.php?e='.$pub['id'].'" class="ls-btn ls-ico-remove bt-deletar-reprovar" title="Excluir"></a>
+						echo '<td style="text-align:center;"><a href="editarPublicacao.php?id='.$pub['id'].'" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a></td>';
+						echo '<td style="text-align:center;"><a onclick="return confirmar();" href="listaPublicacao.php?e='.$pub['id'].'" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 							 </td>';
 					echo '</tr>';
 				
@@ -236,17 +272,7 @@
 
 		}
 	?>
-
-	<div class="contorno col-lg-12 col-xs-12">
-		<br><br>
-		<a href="cadastroPublicacao.php" class="ls-btn-primary col-lg-3 col-xs-12 botao-p ls-float-right">Cadastrar</a>
-	</div>
-		
-	</div>
-      <?php require_once('footer.php');?>
-    </main>
-
-    <?php require_once('assets-footer.php');?>
-
+ </div>
+</div>
   </body>
 </html>
