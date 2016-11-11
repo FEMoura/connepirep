@@ -12,6 +12,7 @@ if (! $login->CheckLogin ()) {
 
 $resultado = false;
 $texto = null;
+$category_id = 0;
 
 $form = filter_input_array ( INPUT_POST, FILTER_DEFAULT );
 if ($form && $form ['submit']) {
@@ -33,11 +34,14 @@ if ($form && $form ['submit']) {
 				//'arquivo' => $upload->getName(),
 				'arquivo' => $upload->getResult(),
 				'aprovado' => 'S',
-				'area' => $_POST ['area'] 
+				'keywords' => $_POST ['keywords'],
+				'area' => $_POST ['area'],
+				'category_id' => $category_id
 		];
 		
 		if($upload->getResult()){		
 			$cadastra = new Create ();
+			require 'app/category_id.php';
 			$cadastra->ExeCreate ( 'publicacao', $dados );
 			
 			if ($cadastra->getResult ()) {
@@ -118,17 +122,22 @@ if ($form && $form ['submit']) {
 		<form action="" name="cadExtensao" method="post" enctype="multipart/form-data">
 			<div class="form-group">
 				<label for="Título">Título:</label>
-				<input type="text" name="titulo" placeholder="Título da Publicação" class="form-control">
+				<input type="text" name="titulo" placeholder="Título da Publicação" class="form-control"required>
 			</div>
 
 			<div class="form-group">
 				<label for="Autores">Autor(es):</label>
-				<input type="text" name="autores" placeholder="Autor(es)" class="form-control">
+				<input type="text" name="autores" placeholder="Autor(es)" class="form-control"required>
+			</div>
+			
+			<div class="form-group">
+				<label for="keywords">Palavras-Chave:</label>
+				<input type="text" name="keywords" placeholder="Palavras-Chave" class="form-control"required>
 			</div>
 
 			<div class="form-group">
 				<label for="Ano">Ano:</label>
-				<input type="text" name="ano" placeholder="Ano" class="form-control">
+				<input type="text" name="ano" placeholder="Ano" class="form-control"required>
 			</div>
 
 		    <div class="form-group">

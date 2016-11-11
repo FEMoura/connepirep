@@ -117,17 +117,17 @@ return true;
 			<form action="" name="cadUsuario" method="post" enctype="multipart/form-data">
 				<div class="form-group">
 					<label for="Nome">Nome:</label>
-					<input type="text" name="nome" placeholder="Primeiro Nome" class="form-control">
+					<input type="text" name="nome" placeholder="Primeiro Nome" class="form-control" required>
 				</div>
 
 				<div class="form-group">
 					<label for="Usuário">Usuário:</label>
-					<input type="text" name="login" placeholder="Usuário" class="form-control">
+					<input type="text" name="login" placeholder="Usuário" class="form-control" required>
 				</div>
 
 				<div class="form-group">
 					<label for="Ano">Senha:</label>
-					<input type="password" name="senha" placeholder="Digite uma Senha" class="form-control">
+					<input type="password" name="senha" placeholder="Digite uma Senha" class="form-control" required>
 				</div>
 			
 				<div class="botao">

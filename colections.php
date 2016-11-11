@@ -76,37 +76,37 @@ else
 							<ul id="comunidade1">
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aaa)> Ciências Agrárias [9]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=1"><aaa)> Ciências Agrárias [9]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aab)> Ciências Biológicas [60]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=2"><aab)> Ciências Biológicas [60]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aae)> Ciências da Saúde [7]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=3"><aae)> Ciências da Saúde [7]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aac)> Ciências Exatas e da Terra [43]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=4"><aac)> Ciências Exatas e da Terra [43]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aad)> Ciências Humanas [50]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=5"><aad)> Ciências Humanas [50]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aaf)> Ciências Sociais e Aplicadas [47]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=6"><aaf)> Ciências Sociais e Aplicadas [47]</h5></a>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Engenharias [60]</a></h5>
+										<h5><a href="viewcolection.php?category_id=7"><aag)> Engenharias [60]</a></h5>
 									</div>
 								</li>
 							</ul>
@@ -118,42 +118,42 @@ else
 							<ul id="comunidade2">
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aaa)> Ciências Agrárias [17]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=8"><aaa)> Ciências Agrárias [17]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aab)> Ciências Biológicas [21]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=9"><aab)> Ciências Biológicas [21]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aae)> Ciências da Saúde [13]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=10"><aae)> Ciências da Saúde [13]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aac)> Ciências Exatas e da Terra [73]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=11"><aac)> Ciências Exatas e da Terra [73]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aad)> Ciências Humanas [15]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=12"><aad)> Ciências Humanas [15]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aaf)> Ciências Sociais e Aplicadas [54]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=13"><aaf)> Ciências Sociais e Aplicadas [54]</h5></a>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Engenharias [108]</a></h5>
+										<h5><a href="viewcolection.php?category_id=14"><aag)> Engenharias [108]</a></h5>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Linguística, Letras e Artes [01]</a></h5>
+										<h5><a href="viewcolection.php?category_id=15"><aag)> Linguística, Letras e Artes [01]</a></h5>
 									</div>
 								</li>
 							</ul>
@@ -165,32 +165,32 @@ else
 							<ul id="comunidade3">
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aab)> Ciências Biológicas [114]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=16"><aab)> Ciências Biológicas [114]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aac)> Ciências Exatas e da Terra [130]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=17"><aac)> Ciências Exatas e da Terra [130]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aad)> Ciências Humanas [199]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=18"><aad)> Ciências Humanas [199]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aaf)> Ciências Sociais e Aplicadas [20]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=19"><aaf)> Ciências Sociais e Aplicadas [20]</h5></a>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Engenharias [55]</a></h5>
+										<h5><a href="viewcolection.php?category_id=20"><aag)> Engenharias [55]</a></h5>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Linguística, Letras e Artes [21]</a></h5>
+										<h5><a href="viewcolection.php?category_id=21"><aag)> Linguística, Letras e Artes [21]</a></h5>
 									</div>
 								</li>
 							</ul>
@@ -202,42 +202,42 @@ else
 							<ul id="comunidade4">
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aaa)> Ciências Agrárias [98]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=22"><aaa)> Ciências Agrárias [98]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aab)> Ciências Biológicas [66]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=23"><aab)> Ciências Biológicas [66]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aae)> Ciências da Saúde [40]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=24"><aae)> Ciências da Saúde [40]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aac)> Ciências Exatas e da Terra [149]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=25"><aac)> Ciências Exatas e da Terra [149]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aad)> Ciências Humanas [131]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=26"><aad)> Ciências Humanas [131]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aaf)> Ciências Sociais e Aplicadas [115]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=27"><aaf)> Ciências Sociais e Aplicadas [115]</h5></a>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Engenharias [244]</a></h5>
+										<h5><a href="viewcolection.php?category_id=28"><aag)> Engenharias [244]</a></h5>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Linguística, Letras e Artes [28]</a></h5>
+										<h5><a href="viewcolection.php?category_id=29"><aag)> Linguística, Letras e Artes [28]</a></h5>
 									</div>
 								</li>
 							</ul>
@@ -249,42 +249,42 @@ else
 							<ul id="comunidade5">
 															<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aaa)> Ciências Agrárias [140]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=30"><aaa)> Ciências Agrárias [140]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aab)> Ciências Biológicas [68]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=31"><aab)> Ciências Biológicas [68]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aae)> Ciências da Saúde [226]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=32"><aae)> Ciências da Saúde [226]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aac)> Ciências Exatas e da Terra [150]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=33"><aac)> Ciências Exatas e da Terra [150]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="colecao2006agro.php"><aaf)> Ciências Sociais e Aplicadas [35]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=34"><aaf)> Ciências Sociais e Aplicadas [35]</h5></a>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Engenharias [163]</a></h5>
+										<h5><a href="viewcolection.php?category_id=35"><aag)> Engenharias [163]</a></h5>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Linguística, Letras e Artes [43]</a></h5>
+										<h5><a href="viewcolection.php?category_id=36"><aag)> Linguística, Letras e Artes [43]</a></h5>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="colecao2006agro.php"><aag)> Multidisciplinar [204]</a></h5>
+										<h5><a href="viewcolection.php?category_id=37"><aag)> Multidisciplinar [204]</a></h5>
 									</div>
 								</li>
 							</ul>

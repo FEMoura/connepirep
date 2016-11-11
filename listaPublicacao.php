@@ -26,7 +26,7 @@
 	
 		if (isset($form['submit'])){
 
-			if ((!$_POST['titulo']) && (!$_POST['autores']) && (!$_POST['ano'])){
+			if ((!$_POST['titulo']) && (!$_POST['autores']) && (!$_POST['ano']) && (!$_POST['keywords'])){
 				$mensagem = "Informe um dos campos para pesquisar!";
 				$tipo = RI_MSG_DANGER;		
 				
@@ -54,6 +54,15 @@
 				//echo "Ano";
 								
 				$read->FullRead("SELECT * FROM publicacao WHERE ano LIKE :like AND aprovado = 'S'", "like={$_POST['ano']}%");
+				if(!$read->getResult()){
+					$resultado = false;
+				}
+				
+			}
+			else if (($_POST['keywords'])){
+				//echo "Palavras-Chave";
+								
+				$read->FullRead("SELECT * FROM publicacao WHERE keywords LIKE :like AND aprovado = 'S'", "like=%{$_POST['keywords']}%");
 				if(!$read->getResult()){
 					$resultado = false;
 				}
@@ -91,15 +100,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="assets/images/if.png">
 
     <title>Repositório CONNEPI - Página do Administrador</title>
 
-    <!-- CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <link href="assets/css/dashboard.css" rel="stylesheet">
 
 	<script type="text/javascript">
@@ -199,6 +210,11 @@
 			<label for="Autores">Autor(es):</label>
 			<input type="text" name="autores" placeholder="Autor(es)" class="form-control">
 	    </div>
+		
+		<div class="form-group">
+			<label for="keywords">Palavras-Chave:</label>
+			<input type="text" name="keywords" placeholder="Palavras-Chave" class="form-control">
+	    </div>
 
 	    <div class="form-group">
 			<label for="Ano">Ano:</label>
@@ -245,11 +261,13 @@
 	<?php
 		if ($read->getResult()){
 	echo'
-	<table class="table table-striped" border="0" id="tb1">
+	<div class="col-lg-12 col-md-12 contorno-table">
+		<table class="ls-table a ls-bg-header ls-table-striped ls-table-bordered display" cellspacing="0" cellpadding="0" border="0" id="tb1">
 		<thead>
 			<th style="text-align:center;">Ano</th>
 			<th style="text-align:center;">Título</th>
 			<th style="text-align:center;">Autor(es)</th>
+			<th style="text-align:center;">Palavras-Chave</th>
 			<th style="text-align:center;">Editar</th>
 			<th style="text-align:center;">Excluir</th>
 		</thead>
@@ -260,6 +278,7 @@
 						echo '<td style="text-align:center;">'.$pub['ano'].'</td>';
 						echo '<td style="text-align:center;">'.$pub['titulo'].'</td>';
 						echo '<td style="text-align:center;">'.$pub['autores'].'</td>';
+						echo '<td style="text-align:center;">'.$pub['keywords'].'</td>';
 						echo '<td style="text-align:center;"><a href="editarPublicacao.php?id='.$pub['id'].'" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a></td>';
 						echo '<td style="text-align:center;"><a onclick="return confirmar();" href="listaPublicacao.php?e='.$pub['id'].'" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
 							 </td>';
@@ -268,7 +287,8 @@
 				}
 	echo'			
 		</tbody>
-	</table>';
+	</table>
+</div';
 
 		}
 	?>
