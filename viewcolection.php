@@ -109,7 +109,7 @@ else
 				echo '<p><h2>CONNEPI '.$area[0]['ano'].' - '.$area[0]['area'].' ['.$total.']</p></h2>';
 			?>
 		</div>
-	<div class="panel panel-success">
+	<div class="container panel panel-success download">
 		<div class="panel-heading"><h4 style="text-align:center;">Registros da coleção</h4></div>
 			<div class="panel-body">
 				

@@ -113,7 +113,8 @@ else
 			?>
 
 			<div class="alert alert-info">
-				<p>Obs.: Para disponibilizar sua produção científica no Repositório deve-se submeter a produção através deste formulário. Onde o mesmo deverá ser aprovado pelo administrador do sistema.</p>
+				<p>Obs.: Essa não é uma submissão oficial do CONNEPI. Sua publicação deve ser submetida neste repositório de forma complementar ao sistema de submissão oficial do evento.</p>
+				<p>Caso sua publicação seja aceita para apresentação no evento, ela será depositada aqui afim de registrar as publicações aceitas em cada edição do CONNEPI.</p>
 				<hr>
 				<p>Requisito para submissão:</p>
 				<p>I - O formato do arquivo deve ser .PDF</p>
