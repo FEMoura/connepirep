@@ -172,22 +172,24 @@ else
 				<div class="col-lg-12 col-md-12 contorno-table">
 					<table class="ls-table a ls-bg-header ls-table-striped ls-table-bordered display" cellspacing="0" cellpadding="0" border="0" id="tb1">
 						<thead>
-							<th>Ano</th>
-							<th>Título</th>
-							<th>Área</th>
-							<th>Autor(es)</th>
-							<th>Palavras-Chave</th>
-							<th>Detalhes</th>
+							<th style="text-align:center;">Ano</th>
+							<th style="text-align:center;">Título</th>
+							<th style="text-align:center;">Autor(es)</th>
+							<th style="text-align:center;">Instituição</th>
+							<th style="text-align:center;">Área</th>
+							<th style="text-align:center;">Palavras-Chave</th>
+							<th style="text-align:center;">Detalhes</th>
 						</thead>
 						<tbody>';
 								
 									foreach ($read->getResult() as $r){
 										echo '<tr>';
-											echo '<td>'.$r['ano'].'</td>';
-											echo '<td>'.$r['titulo'].'</a></td>';
-											echo '<td>'.$r['area'].'</td>';
-											echo '<td>'.$r['autores'].'</td>';
-											echo '<td>'.$r['keywords'].'</td>';
+											echo '<td style="text-align:center;">'.$r['ano'].'</td>';
+											echo '<td style="text-align:center;">'.$r['titulo'].'</a></td>';
+											echo '<td style="text-align:center;">'.$r['autores'].'</td>';
+											echo '<td style="text-align:center;">'.$r['ies'].'</td>';
+											echo '<td style="text-align:center;">'.$r['area'].'</td>';
+											echo '<td style="text-align:center;">'.$r['keywords'].'</td>';
 											echo '<td style="text-align:center;"><a href="view.php?id='.$r['id'].'" class="btn bt-visualizar" title="Visualizar"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>';
 										echo '</tr>';
 									
