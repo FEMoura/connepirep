@@ -119,8 +119,8 @@ else
 </nav>
  
 <!-- Início da barra de busca -->
-
-<div class="container abc">
+<div class="geral">
+	<div class="container abc">
 
 <?php
 	$get = filter_input(INPUT_GET, 'exe', FILTER_DEFAULT);
@@ -190,7 +190,7 @@ else
 											echo '<td style="text-align:center;">'.$r['ies'].'</td>';
 											echo '<td style="text-align:center;">'.$r['area'].'</td>';
 											echo '<td style="text-align:center;">'.$r['keywords'].'</td>';
-											echo '<td style="text-align:center;"><a href="view.php?id='.$r['id'].'" class="btn bt-visualizar" title="Visualizar"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>';
+											echo '<td style="text-align:center;"><a href="view.php?id='.$r['id'].'" class="btn btn-success" title="Visualizar"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></td>';
 										echo '</tr>';
 									
 									}
@@ -201,15 +201,16 @@ else
 				
 			}
 			?>
+	</div>
 </div>
 
-		<div class="container-fluid">
+		<footer class="container-fluid">
 			<div class="row">
 				<div class="cop">
 					<p>2015-<?= date('Y');?> Repositório CONNEPI. Desenvolvido por <a href="http://lattes.cnpq.br/6861906589576170" target="__blank" class="lattes" title="Lattes">Lucas Gabriel</a> e <a href="http://lattes.cnpq.br/1206492903523400" target="__blank" class="lattes" title="Lattes">Felipe Eloi</a></p>
 				</div>
 			</div>
-		</div>
+		</footer>
 
 <!-- JavaScript no fim para carregar as páginas mais rapidamente-->
 	
