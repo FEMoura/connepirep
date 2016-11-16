@@ -123,37 +123,37 @@ else
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=9"><aab)> Ciências Biológicas [21]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=9"><aab)> Ciências Biológicas [22]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=10"><aae)> Ciências da Saúde [13]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=10"><aac)> Ciências da Saúde [14]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=11"><aac)> Ciências Exatas e da Terra [73]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=11"><aad)> Ciências Exatas e da Terra [74]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=12"><aad)> Ciências Humanas [15]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=13"><aae)> Ciências Humanas [15]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=13"><aaf)> Ciências Sociais e Aplicadas [54]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=12"><aaf)> Ciências Sociais e Aplicadas [58]</h5></a>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="viewcolection.php?category_id=14"><aag)> Engenharias [108]</a></h5>
+										<h5><a href="viewcolection.php?category_id=14"><aag)> Engenharias [110]</a></h5>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="viewcolection.php?category_id=15"><aag)> Linguística, Letras e Artes [01]</a></h5>
+										<h5><a href="viewcolection.php?category_id=15"><aah)> Linguística, Letras e Artes [01]</a></h5>
 									</div>
 								</li>
 							</ul>
@@ -161,36 +161,36 @@ else
 				</li>
 				<li class="disable">
 					<div class="disable">
-						<h4 class="disable">- CONNEPI 2008 <span class="label label-success label-as-badge">440</span></h4>
+						<h4 class="disable">- CONNEPI 2008 <span class="label label-success label-as-badge">438</span></h4>
 							<ul id="comunidade3">
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=16"><aab)> Ciências Biológicas [114]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=16"><aaa)> Ciências Biológicas [113]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=17"><aac)> Ciências Exatas e da Terra [130]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=17"><aab)> Ciências Exatas e da Terra [130]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=18"><aad)> Ciências Humanas [199]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=18"><aac)> Ciências Humanas [99]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=19"><aaf)> Ciências Sociais e Aplicadas [20]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=19"><aad)> Ciências Sociais e Aplicadas [21]</h5></a>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="viewcolection.php?category_id=20"><aag)> Engenharias [55]</a></h5>
+										<h5><a href="viewcolection.php?category_id=20"><aae)> Engenharias [55]</a></h5>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="viewcolection.php?category_id=21"><aag)> Linguística, Letras e Artes [21]</a></h5>
+										<h5><a href="viewcolection.php?category_id=21"><aaf)> Linguística, Letras e Artes [20]</a></h5>
 									</div>
 								</li>
 							</ul>
@@ -245,11 +245,11 @@ else
 				</li>
 				<li class="disable">
 					<div class="disable">
-						<h4 class="disable">- CONNEPI 2010 <span class="label label-success label-as-badge">1029</span></h4>
+						<h4 class="disable">- CONNEPI 2010 <span class="label label-success label-as-badge">1028</span></h4>
 							<ul id="comunidade5">
 															<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=30"><aaa)> Ciências Agrárias [140]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=30"><aaa)> Ciências Agrárias [139]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
@@ -259,7 +259,7 @@ else
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=32"><aae)> Ciências da Saúde [226]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=32"><aae)> Ciências da Saúde [35]</h5></a>
 									</div>
 								</li>
 								<li class="disable">
@@ -269,12 +269,12 @@ else
 								</li>
 								<li class="disable">
 									<div class="disable">
-										<h5 class="disable"><a href="viewcolection.php?category_id=34"><aaf)> Ciências Sociais e Aplicadas [35]</h5></a>
+										<h5 class="disable"><a href="viewcolection.php?category_id=34"><aaf)> Ciências Sociais e Aplicadas [225]</h5></a>
 									</div>
 								</li>
 								<li>
 									<div>
-										<h5><a href="viewcolection.php?category_id=35"><aag)> Engenharias [163]</a></h5>
+										<h5><a href="viewcolection.php?category_id=35"><aag)> Engenharias [162]</a></h5>
 									</div>
 								</li>
 								<li>

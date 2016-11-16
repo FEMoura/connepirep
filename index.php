@@ -148,6 +148,7 @@ else
 					<option value="autores">Autor</option>
 					<option value="ano">Ano</option>
 					<option value="keywords">Palavras-Chave</option>
+					<option value="ies">Instituição</option>
 				</select>
 			</div>
 						
