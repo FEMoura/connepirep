@@ -67,15 +67,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="assets/images/if.png">
 
     <title>Repositório CONNEPI - Página do Administrador</title>
 
-    <!-- CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <link href="assets/css/dashboard.css" rel="stylesheet">
     
     <script type="text/javascript">
@@ -171,7 +173,8 @@
 		<?php
 			if ($read->getResult()){
 		echo'
-		<table class="table table-striped" border="0" id="tb1">
+		<div class="col-lg-12 col-md-12">
+			<table class="ls-table a ls-bg-header ls-table-striped ls-table-bordered display" cellspacing="0" cellpadding="0" border="0" id="tb1">
 			<thead>
 				<th style="text-align:center;">Ano</th>
 				<th style="text-align:center;">Título</th>
@@ -184,7 +187,7 @@
 					foreach ($read->getResult() as $pub){
 						echo '<tr>';
 							echo '<td style="text-align:center;">'.$pub['ano'].'</td>';
-							echo '<td style="text-align:justify;">'.$pub['titulo'].'</td>';
+							echo '<td style="text-align:center;">'.$pub['titulo'].'</td>';
 							echo '<td style="text-align:center;">'.$pub['autores'].'</td>';
 							echo '<td style="text-align:center;"><a href="sub.php?id='.$pub['id'].'" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span></a></td>';
 							echo '<td style="text-align:center;"><a onclick="return confirmar();" href="sub.php?e='.$pub['id'].'&p='.$pub['arquivo'].'" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
@@ -195,7 +198,8 @@
 					}
 		echo'			
 			</tbody>
-		</table>';
+			</table>
+		</div>';
 	
 			}
 			else {

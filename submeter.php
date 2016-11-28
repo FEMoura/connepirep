@@ -1,9 +1,9 @@
 ﻿<?php 
 session_start();
 require 'app/Config.inc.php';
-
 $resultado = false;
 $texto = null;
+$category_id = 0;
 
 $form = filter_input_array ( INPUT_POST, FILTER_DEFAULT );
 if ($form && $form ['submit']) {
@@ -25,21 +25,22 @@ if ($form && $form ['submit']) {
 				'arquivo' => $upload->getResult(),
 				'aprovado' => 'N',
 				'area' => $_POST ['area'],
-				'keywords' => $_POST ['keywords']
+				'keywords' => $_POST ['keywords'],
+				'category_id' => $category_id
 		];
-
+	
 		if($upload->getResult()){
 			$cadastra = new Create ();
+			require 'app/category_id.php';
 			$cadastra->ExeCreate ( 'publicacao', $dados );
 				
 			if ($cadastra->getResult ()) {
 				$resultado = true;
 			}
-				
+		
 		}
 	}
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -48,8 +49,9 @@ if ($form && $form ['submit']) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Repositório CONNEPI</title>
-
+	<title>Repositório CONNEPI</title>
+	<link rel="icon" href="assets/images/if.png"></link>
+	
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/repositorio.css" rel="stylesheet">
 
@@ -111,7 +113,8 @@ else
 			?>
 
 			<div class="alert alert-info">
-				<p>Obs.: Para disponibilizar sua produção científica no Repositório deve-se submeter a produção através deste formulário. Onde o mesmo deverá ser aprovado pelo administrador do sistema.</p>
+				<p>Obs.: Essa não é uma submissão oficial do CONNEPI. Sua publicação deve ser submetida neste repositório de forma complementar ao sistema de submissão oficial do evento.</p>
+				<p>Caso sua publicação seja aceita para apresentação no evento, ela será depositada aqui afim de registrar as publicações aceitas em cada edição do CONNEPI.</p>
 				<hr>
 				<p>Requisito para submissão:</p>
 				<p>I - O formato do arquivo deve ser .PDF</p>
@@ -150,7 +153,7 @@ else
 						
 						<div class="form-group col-lg-6 col-md-6">
 					    	<label class="" for="">Ano <span class="requisito">*</span>:</label>
-							<input type="number" class="form-control inp br" name="ano" placeholder="Ex: 2015" required>
+							<input type="text" class="form-control inp br" name="ano" placeholder="Ex: 2015" required>
 						</div>
 						
 						<div class="form-group col-lg-6 col-md-6">

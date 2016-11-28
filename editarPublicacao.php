@@ -56,6 +56,7 @@ if (isset($_POST['titulo'])){
 						'ano' => $_POST ['ano'],
 						'autores' => $_POST ['autores'],
 						'area' => $_POST ['area'],
+						'keywords' => $_POST ['keywords'],
 						'arquivo' => $upload->getResult()
 				];
 										
@@ -80,7 +81,8 @@ if (isset($_POST['titulo'])){
 					'titulo' => $_POST ['titulo'],
 					'ano' => $_POST ['ano'],
 					'autores' => $_POST ['autores'],
-					'area' => $_POST ['area']
+					'area' => $_POST ['area'],
+					'keywords' => $_POST ['keywords']
 			];
 								
 			$update = new Update();
@@ -175,6 +177,11 @@ if (isset($_POST['titulo'])){
 		<div class="form-group">
 			<label for="Area">Área:</label>
 		    <input type="text" name="area" placeholder="Área" class="form-control" value="<?php echo $busca->getResult()[0]['area']; ?>" required>
+		</div>
+		
+		<div class="form-group">
+			<label for="keywords">Palavras-Chave</label>
+		    <input type="text" name="keywords" placeholder="Palavras-Chave" class="form-control" value="<?php echo $busca->getResult()[0]['keywords']; ?>" required>
 		</div>
 		
 		<div class="form-group">

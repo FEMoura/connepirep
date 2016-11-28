@@ -61,7 +61,7 @@ else
 	<div class="container">
 		<?php MSG('Nessa página são disponibilizados os anais completos das edições do CONNEPI', RI_MSG_INFO) ?>
 		<div class="panel panel-default download">
-			<ul>
+			<ul class="media-list">
 				<li><h3><a href="uploads/connepi2006.rar" target="__blank" download="CONNEPI2006.rar"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Anais do CONNEPI 2006 no Rio Grande do Norte</a></li></h3>
 				<li><h3><a href="uploads/connepi2007.rar" target="__blank" download="CONNEPI2007.rar"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Anais do CONNEPI 2007 na Paraíba</a></li></h3>
 				<li><h3><a href="uploads/connepi2008.rar" target="__blank" download="CONNEPI2008.rar"><span class="glyphicon glyphicon-cloud-download" aria-hidden="true"></span> Anais do CONNEPI 2008 no Ceará</a></li></h3>

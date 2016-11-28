@@ -79,30 +79,27 @@ else
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img class="first-slide" src="assets/images/connepi-alagoas.png" alt="First slide">
+		  <div class="container">
+			<div class="carousel-caption">
+			  <p><a class="btn btn-lg btn-primary" href="http://connepi.ifal.edu.br/2016/" role="button">Ir para o site &raquo;</a></p>
+			</div>
+		  </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="assets/images/local.png" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>CONNEPI</h1>
-              <p>CONGRESSO NORTE-NORDESTE DE PESQUISA E INOVAÇÃO</p>
+			<p><h3>Local do evento:</h3></p>
+              <p><a class="btn btn-lg btn-primary" href="https://www.google.com.br/maps/dir/Aeroporto+Internacional+de+Macei%C3%B3+-+Zumbi+dos+Palmares,+Rio+Largo+-+AL/Ritz+Lagoa+da+Anta+-+Av.+Brigadeiro+Eduardo+Gomes+de+Brito,+546+-+Lagoa+da+Anta,+Macei%C3%B3+-+AL,+57038-230/@-9.5819745,-35.8210194,12z/data=!4m14!4m13!1m5!1m1!1s0x701364e4d0e2d31:0xcdb6032e48716fc5!2m2!1d-35.7913635!2d-9.5128509!1m5!1m1!1s0x70145d2d07808f1:0x9e24a4e01542c37c!2m2!1d-35.6988233!2d-9.6392722!5i1" role="button">Ver mapa &raquo;</a></p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <img class="third-slide" src="assets/images/connepi-alagoas.png" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+			<p><h3>RESULTADO DOS ARTIGOS:</h3></p>
+              <p><a class="btn btn-lg btn-primary" href="http://connepi.ifal.edu.br/2016/resultado.php" role="button">Ver lista &raquo;</a></p>
             </div>
           </div>
         </div>
