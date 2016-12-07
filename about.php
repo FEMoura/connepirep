@@ -131,7 +131,7 @@ else
           <p class="lead">O CONNEPI  tem se consolidado como grande incentivador dos projetos científicos desenvolvidos pelos Institutos Federais da Rede Norte-Nordeste. O evento, que a cada edição desde 2006 traz um tema diferente, tem reunido além da comunidade acadêmica, diferentes setores da sociedade, como empresários, governantes, grupos culturais, na expectativa de cumprir o papel da pesquisa: expandi-la além dos muros da academia.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="assets/images/img2.png" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -140,10 +140,10 @@ else
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
           <h2 class="featurette-heading">O evento em uma palavra: <span class="text-muted">Impactante!</span></h2>
-          <p class="lead">De uma ideia em 2006 a um sucesso em 2016. O CONNEPI chega a sua 10ª edição esse ano, e podemos resumir a sua participação na comunidade acadêmica, principalmente no âmbito dos Institutos Federais, com uma palavra: Impactante. A cada edição o evento cresceu e permitiu aos alunos dos Institutos Federais, tanto do ensino médio/técnico quanto do ensino superior, apresentarem o resultado das suas pesquisas e ingressar mais cedo na comunidade acadêmica.</p>
+          <p class="lead">De uma ideia em 2006 a um sucesso em 2016. O CONNEPI chega a sua 11ª edição esse ano, e podemos resumir a sua participação na comunidade acadêmica, principalmente no âmbito dos Institutos Federais, com uma palavra: Impactante. A cada edição o evento cresceu e permitiu aos alunos dos Institutos Federais, tanto do ensino médio/técnico quanto do ensino superior, apresentarem o resultado das suas pesquisas e ingressar mais cedo na comunidade acadêmica.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="assets/images/img1.png" alt="Generic placeholder image">
         </div>
       </div>
 
@@ -155,7 +155,7 @@ else
           <p class="lead">Os artigos apresentados no evento representam o esforço de todos os organizadores e alunos, e isso não poderia ser esquecido. Esse repositório foi desenvolvido com o objetivo de organizar e disponibilizar os artigos de todas as edições do CONNEPI, tendo em vista que o evento não possui um repositório oficial e as publicações se encontravam dispersas na internet. Desta forma, auxiliando para que o conhecimento gerado pelos resultados das pesquisas apresentados no CONNEPI continue sendo difundido e marcando a história de todos os envolvidos.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="assets/images/connepi2006.png" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive center-block" src="assets/images/img3.png" alt="Generic placeholder image">
         </div>
       </div>
 
